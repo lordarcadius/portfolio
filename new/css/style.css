@@ -1,128 +1,132 @@
 body {
-	font-size: 14px;
-    color: #333;
-    background-color: #fff;
-    letter-spacing: 1px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  letter-spacing: 1px;
 }
-.overlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, 0.4);
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.slides-navigation{
-    z-index: 6;
+.slides-navigation {
+  z-index: 6;
 }
 .slides-navigation .prev,
-.slides-navigation .next{
-    width: 47px;
-    height: 47px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.slides-navigation .next {
+  width: 47px;
+  height: 47px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.slides-navigation a.prev{
-    left: 20px;
-    background-image: url(../images/icons/previous.png)
+.slides-navigation a.prev {
+  left: 20px;
+  background-image: url(../images/icons/previous.png);
 }
 
-.slides-navigation a.next{
-    right: 20px;
-    background-image: url(../images/icons/next.png)
+.slides-navigation a.next {
+  right: 20px;
+  background-image: url(../images/icons/next.png);
 }
 
-.TitleMessage{
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    top: 50%;
-    z-index: 5;
-    text-align: center;
-    margin-top: -125px;
+.TitleMessage {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 50%;
+  z-index: 5;
+  text-align: center;
+  margin-top: -125px;
 }
 
-.TitleMessage .heading p{
-    color: #ffffff;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-    font-weight: 100;
-    letter-spacing: 7px;
+.TitleMessage .heading p {
+  color: #ffffff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  font-weight: 100;
+  letter-spacing: 7px;
 }
 
-.TitleMessage .heading .main{
-    font-size: 50px;
-    font-weight: 300;
+.TitleMessage .heading .main {
+  font-size: 50px;
+  font-weight: 300;
 }
 
-.TitleMessage .heading .sub{
-    font-size: 25px;
-    font-weight: 300;
+.TitleMessage .heading .sub {
+  font-size: 25px;
+  font-weight: 300;
 }
 
-.about_profile{
-    padding: 80px 0px;
-    background-color: #000000;
+.about_profile {
+  padding: 80px 0px;
+  background-color: #000000;
 }
 
-.aboutImage{
-    max-width: 100%;
-    max-height: auto;
-    border-radius: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.aboutImage {
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about_text{
-    background-color: #000000;
-    color: #fff;
+.about_text {
+  background-color: #000000;
+  color: #fff;
 }
 
-.heading{
-    padding-top: 30px;
-    text-align: center;
-    color: #ffffff;
+.heading {
+  padding-top: 30px;
+  text-align: center;
+  color: #ffffff;
 }
-.sub_heading{
-    padding: 10px 0px;
-    text-align: center;
-    color: #ffffff9d;
+.sub_heading {
+  padding: 10px 0px;
+  text-align: center;
+  color: #ffffff9d;
 }
 
 .skillsSection {
-    padding: 100px 0;
-	background-color: #000000;
-	color: #fff;
+  padding: 100px 0;
+  background-color: #000000;
+  color: #fff;
 }
 
 .skill {
-    margin-top: 50px;
-	text-align: center;
-	margin-left: 10px;
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 10px;
 }
 
 .chart {
-    margin-top: 10px;
-	position: relative;
-    width: 152px;
-    height: 152px;
-    display: inline-block;
-    text-align: center;
+  margin-top: 10px;
+  position: relative;
+  width: 152px;
+  height: 152px;
+  display: inline-block;
+  text-align: center;
 }
 
 .chart canvas {
-	position: absolute;
-    left: 0;
-    top: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .chart .percent {
-	color: #fff;
-    line-height: 152px;
-    display: inline-block;
-    font-size: 35px;
+  color: #fff;
+  line-height: 152px;
+  display: inline-block;
+  font-size: 35px;
 }
 
 .chart .percent:after {
-	content: '%';
+  content: "%";
+}
+.about_para {
+  margin-bottom: 0px;
+  padding-bottom: 10px;
 }
