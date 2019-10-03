@@ -132,6 +132,34 @@ body {
   padding-bottom: 10px;
 }
 
+@media screen and (max-width: 628px) {
+  .TitleMessage .heading .main {
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .TitleMessage .heading .main {
+    position: relative;
+    top: 55px;
+    font-size: 25px;
+  }
+
+  .TitleMessage .heading .sub {
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    top: 50px;
+  }
+
+  .slides-navigation .prev,
+  .slides-navigation .next {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .skill_h4{
     margin-top: 10px;
 }
