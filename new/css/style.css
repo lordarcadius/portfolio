@@ -73,6 +73,11 @@ body {
     margin-right: auto;
 }
 
+.about_text{
+    background-color: #000000;
+    color: #fff;
+}
+
 .heading{
     padding-top: 30px;
     text-align: center;
@@ -97,6 +102,7 @@ body {
 }
 
 .chart {
+    margin-top: 10px;
 	position: relative;
     width: 152px;
     height: 152px;
