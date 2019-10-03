@@ -46,10 +46,12 @@
 
 .TitleMessage .heading .main{
     font-size: 50px;
+    font-weight: 300;
 }
 
 .TitleMessage .heading .sub{
     font-size: 25px;
+    font-weight: 300;
 }
 
 .section{
