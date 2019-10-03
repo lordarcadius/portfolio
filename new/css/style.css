@@ -126,7 +126,12 @@ body {
 .chart .percent:after {
   content: "%";
 }
+
 .about_para {
   margin-bottom: 0px;
   padding-bottom: 10px;
+}
+
+.skill_h4{
+    margin-top: 10px;
 }
