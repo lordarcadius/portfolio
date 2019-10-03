@@ -131,7 +131,28 @@ body {
   margin-bottom: 0px;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 1336px) {
+    .TitleMessage .heading .main {
+      font-size: 70px;
+      margin-top: -12px;
+      font-weight: 300;
+    }
 
+    .TitleMessage .heading .sub {
+        font-size: 35px;
+        font-weight: 300;
+        position: relative;
+      }
+  }
+
+@media screen and (max-width: 731px) {
+    .TitleMessage .heading .main {
+      margin-top: -10px;
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+  
 @media screen and (max-width: 628px) {
   .TitleMessage .heading .main {
     font-size: 30px;
@@ -142,7 +163,7 @@ body {
 @media screen and (max-width: 530px) {
   .TitleMessage .heading .main {
     position: relative;
-    top: 55px;
+    top: 45px;
     font-size: 25px;
   }
 
@@ -150,7 +171,7 @@ body {
     font-size: 15px;
     font-weight: 300;
     position: relative;
-    top: 50px;
+    top: 35px;
   }
 
   .slides-navigation .prev,
