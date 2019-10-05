@@ -239,8 +239,23 @@ body {
     margin-left: -20%;
     color: #444;
 }
-.statsSection {
+.statsSection, .contactSection {
   padding-bottom: 100px;
   background-color: #000000;
   color: #fff;
+}
+
+.mailButton{
+  color: #fff;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+
+.mailButton:hover{
+  text-decoration: none;
+	color: #000000;
+	background-color:rgba(255, 255, 255, 0.8);
 }
