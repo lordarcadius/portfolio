@@ -274,13 +274,13 @@ body {
 
 .filter .current:focus {
 	background-color: rgba(255, 255, 255, 0.8);;
-	border-color: #fff(255, 255, 255, 0.8);;
+	border-color: #fff;
   color: #000000;
 }
 
 .filter a:hover {
 	background-color: rgba(255, 255, 255, 0.8);;
-	border-color: #fff(255, 255, 255, 0.8);;
+	border-color: #fff;
   color: #000000;
   text-decoration: none;
 }
