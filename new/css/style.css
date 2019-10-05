@@ -261,8 +261,8 @@ body {
 }
 
 .filter a {
-	color: #bdc3c7;
-	border: 1px solid #bdc3c7;
+	color: #fff;
+	border: 1px solid #fff;
 	padding: 10px 18px;
 	display: block;
 }
@@ -272,10 +272,17 @@ body {
 	padding: 5px
 }
 
-.filter .current {
-	background-color: #e74c3c;;
-	border-color: #e74c3c;
-	color: #fff;
+.filter .current:focus {
+	background-color: rgba(255, 255, 255, 0.8);;
+	border-color: #fff(255, 255, 255, 0.8);;
+  color: #000000;
+}
+
+.filter a:hover {
+	background-color: rgba(255, 255, 255, 0.8);;
+	border-color: #fff(255, 255, 255, 0.8);;
+  color: #000000;
+  text-decoration: none;
 }
 
 .filter {
@@ -295,12 +302,18 @@ body {
 }
 
 .itemsContainer {
-	width: 100%;
+  width: 100%;
 }
 
 
 .items li img {
-	width: 100%;
+  width: 100%;
+  
+  -webkit-transition: all 0.3s linear, 1s;
+    -ms-transition: all 0.3s linear, 1s;
+    -mz-transition: all 0.3s linear, 1s;
+    -o-transition: all 0.3s linear, 1s;
+    -transition: all 0.3s linear, 1s;
 }
 
 .items .item {
@@ -329,7 +342,7 @@ body {
 .items a {
 	width: 40px;
     height: 40px;
-    background-color: #e74c3c;
+    background-color: #000000;
     position: relative;
     display: inline-block;
 
@@ -368,14 +381,6 @@ body {
 .items .projectLink {
 	float: right;
 	right: -200px;
-}
-
-.items .item:hover .openButton {
-	left: 0px;
-}
-
-.items .item:hover .projectLink {
-	right: 0px;
 }
 
 .items .item:hover .openButton {
