@@ -239,4 +239,9 @@ body {
     margin-left: -20%;
     color: #444;
 }
+.statsSection {
+  padding-bottom: 100px;
+  background-color: #000000;
+  color: #fff;
+}
 
