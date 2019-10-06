@@ -83,10 +83,16 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
 .sub_heading {
-  padding: 10px 0px;
+  padding-top: 5px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.resume {
+  text-align: center;
+  color: #ffffff;
 }
 
 .skillsSection {
@@ -251,7 +257,7 @@ body {
   color: #fff;
 }
 
-.mailButton{
+.mailButton, .resumeButton{
   color: #fff;
   padding: 15px 20px;
   display: inline-block;
@@ -260,7 +266,7 @@ body {
   border-radius: 2px;
 }
 
-.mailButton:hover{
+.mailButton:hover, .resumeButton:hover{
   text-decoration: none;
 	color: #000000;
 	background-color:rgba(255, 255, 255, 0.8);
