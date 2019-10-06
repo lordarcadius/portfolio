@@ -239,8 +239,14 @@ body {
     margin-left: -20%;
     color: #444;
 }
-.statsSection, .contactSection {
+.statsSection {
   padding-bottom: 100px;
+  background-color: #000000;
+  color: #fff;
+}
+
+.contactSection {
+  padding-bottom: 20px;
   background-color: #000000;
   color: #fff;
 }
@@ -401,4 +407,97 @@ body {
 
 .items {
 	padding: 0;
+}
+
+.copyrightSection {
+	background-color: #000;
+	color: #fff;
+	padding: 30px 5px;
+}
+
+.copyrightSection p {
+	margin: 0;
+}
+
+.social{
+margin-top: 40px;
+text-align: center;
+width: 100%;
+display: inline-block;
+}
+
+.facebook{
+  color: #fff;
+  padding: 6px;
+}
+
+.facebook:hover{
+  color: #3b5998;
+}
+
+.twitter{
+  color: #fff;
+  padding: 6px;
+}
+
+.twitter:hover{
+  color: #55acee;
+}
+
+.youtube{
+  color: #fff;
+  padding: 6px;
+}
+
+.youtube:hover{
+  color: #cd201f;
+}
+
+.linkedin{
+  color: #fff;
+  padding: 6px;
+}
+
+.linkedin:hover{
+  color: #0077b5;
+}
+
+
+.github{
+  color: #fff;
+  padding: 6px;
+}
+
+.github:hover{
+  color: #00405d;
+}
+
+.telegram{
+  color: #fff;
+  padding: 6px;
+}
+
+.telegram:hover{
+  color: #00405d;
+}
+
+.instagram{
+  color: #fff;
+  padding: 6px;
+}
+
+.instagram:hover{
+  color: #3f729b;
+}
+
+.line{
+  color: #fff;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  size: 10px;
+  border-width: 1px;
 }
