@@ -514,3 +514,38 @@ display: inline-block;
   size: 10px;
   border-width: 1px;
 }
+
+#navigation {
+	background-color: #000000;
+    padding: 20px 10px;
+    z-index: 100;
+    width: 100%;
+}
+
+#navigation li {
+	padding: 0 10px;
+}
+
+#navigation li a {
+	color: #fff;
+}
+
+.navbar-brand{
+  color: #fff;
+  margin-bottom: 5px;
+  margin-left: 8px;
+}
+.navbar-brand:hover {
+	color: #fff;
+}
+
+.navbar-toggler-icon {
+	background: url(../images/icons/menu.png);
+	background-size: 100%;
+}
+
+.fixedNav #navigation {
+	position: fixed;
+	top: 0;
+}
+
