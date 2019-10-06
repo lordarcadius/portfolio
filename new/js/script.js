@@ -83,7 +83,7 @@ $(document).ready(function(){
     });
     
     $("#filters a").click(function(){
-        $("#filters.current").removeClass("current");
+        $("#filters a").removeClass("current");
         $(this).addClass("current");
 
          var selector = $(this).attr("data-filter");

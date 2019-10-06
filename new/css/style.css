@@ -294,7 +294,7 @@ body {
 
 }
 
-.filter .current:focus {
+.filter .current {
 	background-color: rgba(255, 255, 255, 0.8);;
 	border-color: #fff;
   color: #000000;
@@ -548,4 +548,3 @@ display: inline-block;
 	position: fixed;
 	top: 0;
 }
-
