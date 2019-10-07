@@ -367,7 +367,7 @@ body {
 }
 
 .items .icons {
-	position: absolute;
+	  position: absolute;
     width: 90px;
     height: 40px;
     left: 50%;
@@ -378,13 +378,13 @@ body {
 }
 
 .items .icons i {
-	color: #fff;
+	  color: #fff;
     font-size: 20px;
     margin-top: 9px;
 }
 
 .items a {
-	width: 40px;
+	  width: 40px;
     height: 40px;
     background-color: #000000;
     position: relative;
@@ -398,7 +398,7 @@ body {
 }
 
 .items .imageOverlay {
-	width: 100%;
+	  width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -437,10 +437,10 @@ body {
 
 .items .item:hover img {
 	-webkit-transform: scale(1.05, 1.05);
-    -moz-transform: scale(1.05, 1.05);
-    -o-transform: scale(1.05, 1.05);
-    -ms-transform: scale(1.05, 1.05);
-    -transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  -transform: scale(1.05, 1.05);
 }
 
 .items {
@@ -458,10 +458,10 @@ body {
 }
 
 .social{
-margin-top: 40px;
-text-align: center;
-width: 100%;
-display: inline-block;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
 }
 
 .facebook{
@@ -542,14 +542,14 @@ display: inline-block;
 
 #navigation {
 	background-color: #000000;
-    padding: 20px 10px;
-    z-index: 100;
-    width: 100%;
-    margin-bottom: -4px;
+  padding: 20px 10px;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: -4px;
 }
 
 #navigation li {
-	padding: 0 10px;
+  padding: 0 10px;
 }
 
 #navigation li a {
