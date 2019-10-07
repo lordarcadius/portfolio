@@ -4,7 +4,8 @@ $(window).on("load", function () {
         $(".loader").fadeOut(750);
     });
 
-    $(".items").isotope({
+    var $container = $('.items');
+    $container.isotope({
         filter: '*',
         animationOptions: {
             duration: 1500,
@@ -93,12 +94,13 @@ $(document).ready(function () {
     $("[data-fancybox]").fancybox();
 
     $("#filters a").click(function () {
-        $("#filters a").removeClass("current");
+        $('#filters .current').removeClass('current');
         $(this).addClass("current");
 
         var selector = $(this).attr("data-filter");
 
-        $(".items").isotope({
+        var $container = $('.items');
+        $container.isotope({
             filter: selector,
             animationOptions: {
                 duration: 1500,
