@@ -567,7 +567,12 @@ display: inline-block;
 
 .navbar-toggler-icon {
 	background: url(../images/icons/menu.png);
-	background-size: 100%;
+  background-size: 100%;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
 }
 
 .fixedNav #navigation {
