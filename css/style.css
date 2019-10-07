@@ -1,10 +1,17 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: #333;
-  background-color: #fff;
+  color: #fff;
+  background-color: #000;
   letter-spacing: 1px;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .overlay {
   width: 100%;
   height: 100%;
@@ -102,6 +109,14 @@ body {
   margin-bottom: 0px;
   padding-bottom: 10px;
 }
+
+.skillsSection {
+  padding: 100px 0;
+  background-color: #000000;
+  color: #fff;
+  margin-bottom: -80px;
+}
+
 @media screen and (max-width: 1336px) {
     .TitleMessage .heading .main {
       font-size: 70px;
@@ -150,10 +165,6 @@ body {
     width: 25px;
     height: 25px;
   }
-}
-
-.skill_h4{
-    margin-top: 10px;
 }
 
 .squareItem {
@@ -555,4 +566,124 @@ body {
 	width: 100%;
 	height: 100%;
 	background: url(../images/loader.gif) center center no-repeat;
+}
+
+.u-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-self: center
+}
+
+.skill{
+  margin: 1em 0;
+  position: relative;
+  width: 50em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1024px){
+  .skill{
+    width: 40em;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .skill{
+    width: 35em;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .skill{
+    width: 30em;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 470px){
+  .skill{
+    width: 22em;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 330px){
+  .skill{
+    width: 15em;
+  }
+}
+
+.skill_type{
+  color: #fff;
+  font-weight: 300;
+  font-size: .8em;
+  letter-spacing: .145em;
+  width: 5em;
+}
+
+.skill_outerbar, .skill_innerbar{
+  height: .75em;
+}
+
+.skill_outerbar{
+  margin-top: 1em;
+  background: #333;
+
+}
+
+.skill_innerbar{
+  animation: fillBar 1s forwards;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+
+.skill_innerbar-100{
+  width: 100%;
+  background: #FF3F3F;
+}
+.skill_innerbar-90{
+  width: 90%;
+  background: #EFF317;
+}
+.skill_innerbar-80{
+  width: 80%;
+  background: #2DE5CC;
+}
+.skill_innerbar-70{
+  width: 70%;
+  background: #FF86E4;
+}
+.skill_innerbar-60{
+  width: 60%;
+  background: #1DF79A;
+}
+.skill_innerbar-50{
+  width: 50%;
+  background: #84CD9D;
+}
+.skill_innerbar-40{
+  width: 40%;
+  background: #FD6400;
+}
+
+
+@keyframes fillBar{
+  to {
+    transform: scaleX(1);
+  }
 }
