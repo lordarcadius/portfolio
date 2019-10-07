@@ -98,45 +98,6 @@ body {
   color: #ffffff;
 }
 
-.skillsSection {
-  padding: 100px 0;
-  background-color: #000000;
-  color: #fff;
-  margin-bottom: -1px;
-}
-
-.skill {
-  margin-top: 50px;
-  text-align: center;
-  margin-left: 10px;
-}
-
-.chart {
-  margin-top: 10px;
-  position: relative;
-  width: 152px;
-  height: 152px;
-  display: inline-block;
-  text-align: center;
-}
-
-.chart canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.chart .percent {
-  color: #fff;
-  line-height: 152px;
-  display: inline-block;
-  font-size: 35px;
-}
-
-.chart .percent:after {
-  content: "%";
-}
-
 .about_para {
   margin-bottom: 0px;
   padding-bottom: 10px;
