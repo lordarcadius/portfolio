@@ -1,175 +1,600 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-    <meta name="ocs-site-verification" content="45b0a1b8cc0eafe4ce7847871f9d33ea" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="theme-color" content="#00796B">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content=#000000>
     <title>Vipul Jha</title>
-
-    <!-- CSS  -->
-    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-    <link href="min/custom-min.css" type="text/css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.bmp">
+    <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body id="top" class="scrollspy">
 
-<!-- Pre Loader -->
-<div id="loader-wrapper">
-    <div id="loader"></div>
+<body>
+    <div class="loader">
+        <div class="inner">
+        </div>
+    </div>
 
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-
-</div>
-
-<!--Navigation-->
- <div class="navbar-fixed">
-    <nav id="nav_f" class="default_color" role="navigation">
-        <div class="container">
-            <div class="nav-wrapper"><a id="logo-container" href="#top" class="brand-logo">Vipul Jha</a>
-            <ul id="nav-mobile" class="right side-nav">
-                <li><a href="#work">My Works</a></li>
-                <li><a href="#team">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div id="slides">
+        <div class="overlay"></div>
+        <div class="slides-container">
+            <img src="images/slide1.jpg" alt="">
+            <img src="images/slide2.jpg" alt="">
+            <img src="images/slide3.jpg" alt="">
+            <img src="images/slide4.jpg" alt="">
+        </div>
+        <div class="TitleMessage">
+            <div class="heading">
+                <p class="main">VIPUL JHA</p>
+                <p class="sub typed"></p>
             </div>
+
+        </div>
+
+        <nav class="slides-navigation">
+            <a href="#" class="next"></a>
+            <a href="#" class="prev"></a>
+        </nav>
+    </div>
+
+    <nav id="navigation" class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#slides">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#stats">Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
-</div>
 
-<!--Hero-->
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <h1 class="text_h center header cd-headline letters type">
-            <span>I Love</span>
-            <span class="cd-words-wrapper waiting">
-                <b class="is-visible">Android</b>
-                <b>Coding</b>
-                <b>Blogging</b>
-            </span>
-        </h1>
-    </div>
-</div>
+    <section id="about" class="about_profile">
+        <div class="container">
+            <img class="aboutImage" src="images/profile.jpg" alt="">
+        </div>
+        <div class="heading">
+            <h1>Vipul Jha</h1>
+        </div>
+        <div class="sub_heading">
+            <h5>Engineering Student</h5>
+        </div>
+        <div class="resume">
+            <a href="files/resume.pdf" class="resumeButton">DOWNLOAD RESUME</a>
+        </div>
+        </div>
+    </section>
+    <section class="about_text">
+        <div class="container">
+            <h4>Hey there,</h4>
+            <p class="about_para">This is Vipul Jha from New Delhi, India. I am an Android developer who develops Apps,
+                Kernels, ROMs and Scripts. Currently I am pursuing my <b>B. Tech. in Information Technology</b> from
+                <b>Maharaja Surajmal Institute of Technology.</b> In July, 2019 I completed my <b>Diploma in Computer
+                    Engineering</b> from <b>Ambedkar Institute of Technology</b> with first class & distinction. </p>
+            <p class="about_para">Apart from being a developer I used to write tech articles on my blog. I have
+                experience of more than 4 years in blogging. In android after market developer community I am known as
+                <b>LordArcadius</b>. I am a senior member on <a
+                    href="https://forum.xda-developers.com/member.php?u=6546022">XDA Developers forum</a> & I have done
+                lots of ROMs, Kernel, App porting & Scripting related projects on XDA forums. <a
+                    href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-electrablue-kernel-redmi-note-4-t3655651">ElectraBlue
+                    Kernel</a> and <a
+                    href="https://forum.xda-developers.com/android/software-hacking/tweak-arkaynine-boost-script-v3-0-t3120404">ABS
+                    Tweaks</a> are some of my best works.</p>
 
-<!--Work-->
-<div class="section scrollspy" id="work">
-    <div class="container">
-        <center><h2 class="header text_b">My Works For Android </h2></center>
-        <div class="row">
-             <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/eb.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">ElectraBlue Kernel <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="eb.html">Go Here</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Summary <i class="mdi-navigation-close right"></i></span>
-                        <p>Find the whole list of devices supported by ElectraBlue Kernel with download links</p>
-                    </div>
+        </div>
+    </section>
+
+    <div id="skills" class="skillsSection">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12 text-center">
+                    <hr class="line" width="40%">
+                    <h2>TECHNICAL SKILLS</h2>
+                    <p>A representation of my proficiency in each skill</p>
                 </div>
             </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/a1.jpg">
+
+        </div>
+
+    </div>
+
+    <div class="u-center">
+        <section class="skills">
+            <div class="skill">
+                <h3 class="skill_type">Java</h3>
+                <div class="skill_outerbar">
+                    <div class="skill_innerbar skill_innerbar-60"></div>
+                </div>
+            </div>
+            <div class="skill">
+                    <h3 class="skill_type">Shell</h3>
+                    <div class="skill_outerbar">
+                        <div class="skill_innerbar skill_innerbar-90"></div>
                     </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Android One <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="a1.html">Go Here</a></p>
+                </div>
+                <div class="skill">
+                        <h3 class="skill_type">HTML</h3>
+                        <div class="skill_outerbar">
+                            <div class="skill_innerbar skill_innerbar-70"></div>
+                        </div>
                     </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Summary <i class="mdi-navigation-close right"></i></span>
-                        <p>Here you can find all my works for Android One devices</p>
+                    <div class="skill">
+                            <h3 class="skill_type">C</h3>
+                            <div class="skill_outerbar">
+                                <div class="skill_innerbar skill_innerbar-40"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                                <h3 class="skill_type">C++</h3>
+                                <div class="skill_outerbar">
+                                    <div class="skill_innerbar skill_innerbar-50"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                    <h3 class="skill_type">WordPress</h3>
+                                    <div class="skill_outerbar">
+                                        <div class="skill_innerbar skill_innerbar-100"></div>
+                                    </div>
+                                </div>
+                </section>
+    </div>
+
+    <div id="stats" class="statsSection">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <hr class="line" width="40%">
+                    <h2>PERSONAL STATS</h2>
+                    <p>Some stats related to my experience and projects.</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="squareItem">
+                        <div class="squareInnerContainer">
+                            <div class="squareIcon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div class="squareContent">
+                                <h2> <span class="counter">50</span><span>+</span></h2>
+                                <h3>Shell Scripts</h3>
+                            </div>
+                        </div>
                     </div>
+
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="squareItem">
+                        <div class="squareInnerContainer">
+                            <div class="squareIcon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <div class="squareContent">
+                                <h2><span class="counter">20</span><span>+</span></h2>
+                                <h3>Android Projects</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="squareItem">
+                        <div class="squareInnerContainer">
+                            <div class="squareIcon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="squareContent">
+                                <h2> <span class="counter">200</span><span>K+</span></h2>
+                                <h3>Downloads</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="squareItem">
+                        <div class="squareInnerContainer">
+                            <div class="squareIcon">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <div class="squareContent">
+                                <h2 class="counter">4</h2>
+                                <h3>Websites</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="portfolio" class="statsSection">
+        <div class="container">
+            <div class="row">
+                <div class="heading">
+                    <hr class="line" width="40%">
+                    <h2>PORTFOLIO</h2>
+                </div>
+                <div class="filter">
+                    <ul id="filters">
+                        <li><a href="#" data-filter="*" class="current">ALL</a></li>
+                        <li><a href="#" data-filter=".apps">APPS</a></li>
+                        <li><a href="#" data-filter=".eb">KERNEL</a></li>
+                        <li><a href="#" data-filter=".roms">ROMS</a></li>
+                        <li><a href="#" data-filter=".websites">WEBSITES</a></li>
+                        <li><a href="#" data-filter=".others">OTHERS</a></li>
+                    </ul>
+                </div>
+                <div class="itemsContainer">
+                    <ul class="row items">
+                        <li onclick="" class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/techfluethumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/techflue.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="TechFlue.com was my personal tech blog where I used to write tech articles. It went down in 2018.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://web.archive.org/web/20170106144905/http://www.techflue.com/"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/aitcthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/aitc.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="AIT MyPercentage Calculator reduces the efforts in calculating overall final percantage of Diploma passouts.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://drive.google.com/open?id=143g6nPFrid0iDs4vAr1AgbkFjDt85Y9A"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/foodsterthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/foodster.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="Foodster is a food catalog app for android devices.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://drive.google.com/file/d/13z9IDeHT_K4-HuZJeUBZje-h9Vx0tqOH/view?usp=sharing"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/dopetechthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/dopetech.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="DopeTech.org was a tech blog started by me and my friends at Team DroidX. It went down in 2018.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://web.archive.org/web/20180720021217/https://www.dopetech.org/"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="eb col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/ebmidothumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/ebmido.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="ElectraBlue Kernel for Redmi Note 4 was launched in 2017.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-electrablue-kernel-redmi-note-4-t3655651"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="eb col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/ebsproutthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/ebsprout.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="ElectraBlue Kernel for Android One 1st Gen devices was launched in 2015.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/crossdevice-dev/android-one-crossdevice-development-original-android-development/electrablue-kernel-sprout-t3445880/page5"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/vipulthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/vipul.jpg" title="View Image" class="openButton"
+                                        data-fancybox data-caption="My old theme for this portfolio.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://vipuljha.com" target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="roms col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/blissthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/bliss.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="Bliss ROM for Android One 1st Gen devices was officially maintained by me.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/crossdevice-dev/android-one-crossdevice-development-original-android-development/rom-bliss-mm-rom-android-one-devices-t3393347"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="roms col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/lineagethumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/lineage.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="I was the first to compile LineageOS 13 for Android ONe 1st Gen devices.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/crossdevice-dev/android-one-general/rom-lineageos-13-0-sprout4-sprout8-t3567097"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="roms col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/carbonthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/carbon.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="I started building Carbon ROM for Redmi Note 4 and also pushed it for official builds.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/rom-carbon-rom-xiaomi-redmi-note-4-t3635430"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="others col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/absthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/abs.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="ABS Tweaks was launched in 2015 for all android devices and it recieved more than 180K downloads till now. It was deprecated in 2016.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/android/software-hacking/tweak-arkaynine-boost-script-v3-0-t3120404"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="others col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/newsthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/news.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="I was featured in XDA News portal for porting Lenovo SNAPit Camera.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://www.xda-developers.com/lenovos-snapit-camera-android-6/"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="others col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/snapthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/snap.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="Snap camera has tons of features. Way before Google camera, Snap camera had a demand and I listned to people by porting it.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/android/apps-games/app-lenovo-snapit-camera-redmi-note-4-t3608065"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="others col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/udelerthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/udeler.jpg" title="View Image" class="openButton"
+                                        data-fancybox data-caption="My translations to Udeler.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://github.com/lordarcadius/udemy-downloader-gui" target="_blank"
+                                        class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="others col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/cappsthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/capps.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="When CM 13 launched, there wasn't any support for C-Apps as it was only available for CM 12.1 So I ported it.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/android/development/c-apps-modded-cyanogen-os-c-apps-cm13-t3254865"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+                        <li onclick="" class="others col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="item">
+                                <img src="images/thumbnails/cafthumb.jpg">
+                                <div class="icons">
+                                    <a href="images/portfolio/caf.jpg" title="View Image" class="openButton"
+                                        data-fancybox
+                                        data-caption="I realised that many new kernel developers don't know how to merge latest CAF tags. So that's why I came up with a simple guide.">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a href="https://forum.xda-developers.com/android/software-hacking/reference-merge-caf-tag-kernel-t3787564"
+                                        target="_blank" class="projectLink">
+                                        <i class="fa fa-link"></i>
+
+                                    </a>
+                                </div>
+                                <div class="imageOverlay"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--Parallax-->
-<div class="parallax-container">
-    <div class="parallax"><img src="img/parallax.png"></div>
-</div>
-
-<!--About me-->
-<div class="section scrollspy" id="team">
-    <div class="container">
-        <centre><h2 class="header text_b"> About Me </h2></centre>
-         <div class="col s12 m4 l4">
-              <div class="card">
-                <div class="card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/my.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Vipul Jha <br/>
-                            <small><em><a class="red-text text-darken-1" href="#">Android Developer+Student+Blogger</a></em></small></span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/vipuljha08">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/techflue">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/VipulJhaXDA">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://github.com/vipuljha08">
-                                <i class="fa fa-github-square"></i>
-                            </a>
-                        </p>
-                   </div>
-                </div>
-            </div>
+    <div id="contact" class="contactSection">
+        <div class="col-md-12 text-center">
+            <hr class="line" width="40%">
+            <h2>FOUND MY WORK INTERESTING? </h2>
+            <p>Would love to hear from you!</p>
+            <a href="mailTo:vipuljha08@gmail.com" class="mailButton">GET IN TOUCH</a>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/lordarcadius" class="facebook" target="_blank"><i
+                    class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.twitter.com/lordarcadius" class="twitter" target="_blank"><i
+                    class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/eb_vipul" class="instagram" target="_blank"><i
+                    class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.github.com/lordarcadius" class="github" target="_blank"><i
+                    class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/lordarcadius/" class="linkedin" target="_blank"><i
+                    class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.youtube.com/channel/UC11D7z5L53NezcR0GWFwRPg?view_as=subscriber" class="youtube"
+                target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://t.me/LordArcadius" class="telegram" target="_blank"><i
+                    class="fab fa-telegram fa-2x"></i></a>
         </div>
     </div>
-</div>
 
-<!--Footer-->
-<footer id="contact" class="page-footer default_color scrollspy">
-    <div class="container">  
-        <div class="row">
-            <div class="col l6 s12">
-                <form class="col s12" action="contact.php" method="post">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <i class="mdi-action-account-circle prefix white-text"></i>
-                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
-                            <label for="icon_prefix" class="white-text">First Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <i class="mdi-communication-email prefix white-text"></i>
-                            <input id="icon_email" name="email" type="email" class="validate white-text">
-                            <label for="icon_email" class="white-text">Email-id</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <i class="mdi-editor-mode-edit prefix white-text"></i>
-                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
-                            <label for="icon_prefix2" class="white-text">Message</label>
-                        </div>
-                        <div class="col offset-s7 s5">
-                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-                                <i class="mdi-content-send right white-text"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    <div class="copyrightSection">
+
+        <div class="col-md-12 text-center">
+            <p>&copy; 2019 Vipul Jha. All rights reserved.</p>
         </div>
-     </div>  
-</footer>
 
-<!--  Scripts-->
-<script src="min/plugin-min.js"></script>
-<script src="min/custom-min.js"></script>
-<script src="js/security.js"></script>
+    </div>
 
-
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/countUp.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src="js/countUp-jquery.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
-</html>
 
+</html>
