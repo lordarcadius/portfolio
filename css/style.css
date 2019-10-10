@@ -2,18 +2,18 @@
 
 @import "./superslides.css";
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: #fff;
   background-color: #000;
   letter-spacing: 1px;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .overlay {
@@ -73,7 +73,7 @@ body {
 
 .about_profile {
   padding: 80px 0px;
-  background-color: #000000;
+  background-color: #000;
 }
 
 .aboutImage {
@@ -86,7 +86,7 @@ body {
 }
 
 .about_text {
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-top: -1px;
   margin-bottom: -1px;
@@ -116,7 +116,7 @@ body {
 
 .skillsSection {
   padding: 100px 0;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-bottom: -80px;
 }
@@ -235,7 +235,7 @@ body {
 }
 .statsSection {
   padding-bottom: 100px;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-bottom: -1px;
   margin-top: -4px;
@@ -243,7 +243,7 @@ body {
 
 .contactSection {
   padding-bottom: 20px;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-bottom: -4px;
   margin-top: -4px;
@@ -256,12 +256,6 @@ body {
   margin-top: 20px;
   border: 1px solid #fff;
   border-radius: 2px;
-}
-
-.mailButton:hover, .resumeButton:hover{
-  text-decoration: none;
-	color: #000000;
-	background-color:rgba(255, 255, 255, 0.8);
 }
 
 .filter {
@@ -364,7 +358,7 @@ body {
 .items a {
 	  width: 40px;
     height: 40px;
-    background-color: #000000;
+    background-color: #000;
     position: relative;
     display: inline-block;
 
@@ -519,7 +513,7 @@ body {
 }
 
 #navigation {
-	background-color: #000000;
+	background-color: rgba(0,0,0,0.9);
   padding: 20px 10px;
   z-index: 100;
   width: 100%;
@@ -528,6 +522,14 @@ body {
 
 #navigation li {
   padding: 0 10px;
+  transition: .3s;
+  margin-right: 10px;
+}
+
+#navigation li:hover{
+  font-weight: 600;
+  transition: .3s;
+  transform: scale(1.2);
 }
 
 #navigation li a {
@@ -574,122 +576,86 @@ body {
 	background: url(../images/loader.gif) center center no-repeat;
 }
 
-.u-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin-bottom: 50px;
+.progress, .progress-bar{
+  height: 1.2rem;
+  transition: .3s;
 }
 
-.skills{
-  display: flex;
-  flex-direction: column;
-  align-self: center
+.progress-bar:hover {
+  cursor: pointer;
+  filter: invert(100%);
+  transition: .5s;
 }
 
-.skill{
-  margin: 1em 0;
-  position: relative;
-  width: 40em;
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-@media screen and (max-width: 1024px){
-  .skill{
-    width: 40em;
-    margin-left: 15px;
-    margin-right: 15px;
+@media screen and (max-width: 993px){
+  #navigation li:hover{
+    transition: .3s;
+    transform: scale(1);
+    margin-left: 20px;
   }
 }
-
-@media screen and (max-width: 750px){
-  .skill{
-    width: 35em;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-
-@media screen and (max-width: 550px){
-  .skill{
-    width: 30em;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-
-@media screen and (max-width: 470px){
-  .skill{
-    width: 25em;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-
-@media screen and (max-width: 360px){
-  .skill{
-    width: 15em;
-  }
-}
-
-.skill_type{
-  color: #fff;
-  font-weight: 300;
-  font-size: .8em;
-  letter-spacing: .145em;
-  width: 5em;
-}
-
-.skill_outerbar, .skill_innerbar{
-  height: .75em;
-}
-
-.skill_outerbar{
-  margin-top: 1em;
-  background: #333;
-
-}
-
-.skill_innerbar{
-  animation: fillBar 1s forwards;
-  transform: scaleX(0);
-  transform-origin: 0 0;
-}
-
-.skill_innerbar-100{
-  width: 100%;
-  background: #FF3F3F;
-}
-.skill_innerbar-90{
-  width: 90%;
-  background: #EFF317;
-}
-.skill_innerbar-80{
-  width: 80%;
-  background: #2DE5CC;
-}
-.skill_innerbar-70{
-  width: 70%;
-  background: #FF86E4;
-}
-.skill_innerbar-60{
-  width: 60%;
-  background: #1DF79A;
-}
-.skill_innerbar-50{
-  width: 50%;
-  background: #84CD9D;
-}
-.skill_innerbar-40{
-  width: 40%;
-  background: #FD6400;
-}
-
 
 @keyframes fillBar{
   to {
     transform: scaleX(1);
   }
 }
+
+.resumeButton , .mailButton {
+  text-decoration: none;
+  font-weight: 600;
+  transition: .4s;
+}
+
+.resumeButton:hover, .mailButton:hover{
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #444;
+  transition: .4s;
+  text-decoration: none;
+}
+
+.filter .filter-apps:hover{
+  background-color: #3f51b5;
+  color: white;
+}
+.filter .filter-eb:hover{
+  background-color: #00897b;
+  color: white;
+}
+.filter .filter-roms:hover{
+  background-color: #ef6c00;
+  color: white;
+}
+.filter .filter-websites:hover{
+  background-color: #607d8b;
+  color: white;
+}
+.filter .filter-other:hover{
+  background-color: #00695f;
+  color: white;
+}
+
+/* GreyMod */ 
+/* ############### */
+
+/* body,
+ .about_profile,
+ .about_text,
+ .skillsSection,
+ .statsSection,
+ .contactSection,
+ .items a, 
+ .copyrightSection, 
+ .loader {
+   background-color: #1b1b1b;
+ }
+#navigation {
+  background-color: rgba(27,27,27,0.8);
+}
+
+.resumeButton {
+  background-color: #009688;
+} */
+
+/* ############### */
