@@ -16,7 +16,6 @@ $(window).on("load", function () {
 
 })
 
-
 $(document).ready(function () { 
 
     $('#slides').superslides({
