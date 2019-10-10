@@ -577,7 +577,7 @@ body {
 }
 
 .progress, .progress-bar{
-  height: 2rem;
+  height: 1.2rem;
   transition: .3s;
 }
 
