@@ -73,7 +73,7 @@ body {
 
 .about_profile {
   padding: 80px 0px;
-  background-color: #000000;
+  background-color: #000;
 }
 
 .aboutImage {
@@ -86,7 +86,7 @@ body {
 }
 
 .about_text {
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-top: -1px;
   margin-bottom: -1px;
@@ -116,7 +116,7 @@ body {
 
 .skillsSection {
   padding: 100px 0;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-bottom: -80px;
 }
@@ -235,7 +235,7 @@ body {
 }
 .statsSection {
   padding-bottom: 100px;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-bottom: -1px;
   margin-top: -4px;
@@ -243,7 +243,7 @@ body {
 
 .contactSection {
   padding-bottom: 20px;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   margin-bottom: -4px;
   margin-top: -4px;
@@ -256,12 +256,6 @@ body {
   margin-top: 20px;
   border: 1px solid #fff;
   border-radius: 2px;
-}
-
-.mailButton:hover, .resumeButton:hover{
-  text-decoration: none;
-	color: #000000;
-	background-color:rgba(255, 255, 255, 0.8);
 }
 
 .filter {
@@ -364,7 +358,7 @@ body {
 .items a {
 	  width: 40px;
     height: 40px;
-    background-color: #000000;
+    background-color: #000;
     position: relative;
     display: inline-block;
 
@@ -519,7 +513,7 @@ body {
 }
 
 #navigation {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.9);
   padding: 20px 10px;
   z-index: 100;
   width: 100%;
@@ -528,18 +522,15 @@ body {
 
 #navigation li {
   padding: 0 10px;
-  transition: .2s;
-  margin-right: 5px;
+  transition: .3s;
+  margin-right: 10px;
 }
 
 #navigation li:hover{
-  background: rgba(255,255,255,0.7);
+  font-weight: 600;
   transition: .3s;
-  border-radius:5px;
+  transform: scale(1.2);
 }
-#navigation li a:hover{
-  color: #000;
-} 
 
 #navigation li a {
 	color: #fff;
@@ -597,8 +588,10 @@ body {
 }
 
 @media screen and (max-width: 993px){
-  #navigation {
-    background: #000;
+  #navigation li:hover{
+    transition: .3s;
+    transform: scale(1);
+    margin-left: 20px;
   }
 }
 
@@ -607,3 +600,62 @@ body {
     transform: scaleX(1);
   }
 }
+
+.resumeButton , .mailButton {
+  text-decoration: none;
+  font-weight: 600;
+  transition: .4s;
+}
+
+.resumeButton:hover, .mailButton:hover{
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #444;
+  transition: .4s;
+  text-decoration: none;
+}
+
+.filter .filter-apps:hover{
+  background-color: #3f51b5;
+  color: white;
+}
+.filter .filter-eb:hover{
+  background-color: #00897b;
+  color: white;
+}
+.filter .filter-roms:hover{
+  background-color: #ef6c00;
+  color: white;
+}
+.filter .filter-websites:hover{
+  background-color: #607d8b;
+  color: white;
+}
+.filter .filter-other:hover{
+  background-color: #00695f;
+  color: white;
+}
+
+/* GreyMod */ 
+/* ############### */
+
+/* body,
+ .about_profile,
+ .about_text,
+ .skillsSection,
+ .statsSection,
+ .contactSection,
+ .items a, 
+ .copyrightSection, 
+ .loader {
+   background-color: #1b1b1b;
+ }
+#navigation {
+  background-color: rgba(27,27,27,0.8);
+}
+
+.resumeButton {
+  background-color: #009688;
+} */
+
+/* ############### */
