@@ -16,7 +16,7 @@ $(window).on("load", function () {
 
 })
 
-$(document).ready(function () { 
+$(document).ready(function () {
 
     $('#slides').superslides({
         animation: 'fade',
@@ -38,7 +38,7 @@ $(document).ready(function () {
     var countUpFinished = false;
 
     $(window).scroll(function () {
-        
+
         if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
             $(".counter").each(function () {
                 var element = $(this);
