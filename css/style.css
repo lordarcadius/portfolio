@@ -422,11 +422,11 @@ body {
 .copyrightSection {
 	background-color: #000;
 	color: #fff;
-	padding: 30px 5px;
+  padding: 30px 5px;
 }
 
 .copyrightSection p {
-	margin: 0;
+  margin: 0;
 }
 
 .social{
@@ -634,6 +634,18 @@ body {
 .filter .filter-other:hover{
   background-color: #00695f;
   color: white;
+}
+
+.heart{
+  color: red;
+  font-size: 22px;
+}
+
+.creditSection{
+  margin-top: 20px;
+}
+.creditSection p{
+  margin: 0;
 }
 
 /* GreyMod */ 
