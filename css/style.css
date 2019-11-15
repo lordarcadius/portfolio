@@ -488,6 +488,15 @@ body {
   color: #6492b8;
 }
 
+.dev {
+  color: #fff;
+  padding: 6px;
+}
+
+.dev:hover {
+  color: #2ae48d;
+}
+
 .line {
   color: #fff;
   display: block;
