@@ -109,3 +109,7 @@ $(document).ready(function () {
     }
 
 });
+
+document.querySelector('#blog-link').addEventListener('click', () => {
+    window.location = 'https://www.vipuljha.com/blog';
+})
