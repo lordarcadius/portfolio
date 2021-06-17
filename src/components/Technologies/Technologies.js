@@ -1,50 +1,89 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { DiAndroid, DiTerminal } from 'react-icons/di';
+import { SiJava, SiFirebase, SiGit } from 'react-icons/si';
+import { RiFlutterFill } from 'react-icons/ri';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
-const Technologies = () =>  (
-  <Section id="tech">
+const Technologies = () => (
+  <Section id="skills">
     <SectionDivider divider />
-    <SectionTitle>Technologies</SectionTitle>
+    <SectionTitle>Skills</SectionTitle>
     <SectionText>
-      I've worked with a range a technologies in the web development world.
-      From Back-end To Design
+      I've worked with multiple technologies as a developer to create my projects.
     </SectionText>
     <List>
       <ListItem>
         <picture>
-          <DiReact size="3rem" />
+          <DiAndroid size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Front-End</ListTitle>
+          <ListTitle>Android</ListTitle>
           <ListParagraph>
             Experiece with <br />
-            React.js
+            Android Apps, ROMs <br />
+            & Kernels
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <picture>
-          <DiFirebase size="3rem" />
+          <RiFlutterFill size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>Back-End</ListTitle>
+          <ListTitle>Flutter</ListTitle>
           <ListParagraph>
             Experience with <br />
-            Node and Databases
+            Flutter apps &
+            Dart
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <picture>
-          <DiZend size="3rem" />
+          <SiJava size="3rem" />
         </picture>
         <ListContainer>
-          <ListTitle>UI/UX</ListTitle>
+          <ListTitle>Java</ListTitle>
           <ListParagraph>
             Experience with <br />
-            tools like Figma
+            developing apps
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <DiTerminal size="3rem" />
+        </picture>
+        <ListContainer>
+          <ListTitle>Scripting</ListTitle>
+          <ListParagraph>
+            Experience with <br />
+            writing shell scripts
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiFirebase size="3rem" />
+        </picture>
+        <ListContainer>
+          <ListTitle>Firebase</ListTitle>
+          <ListParagraph>
+            Experience in Firebase<br />
+            for auth & database 
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiGit size="3rem" />
+        </picture>
+        <ListContainer>
+          <ListTitle>Git</ListTitle>
+          <ListParagraph>
+            Experience with <br />
+            Git commands & featurs
           </ListParagraph>
         </ListContainer>
       </ListItem>
