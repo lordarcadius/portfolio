@@ -9,13 +9,15 @@ const Hero = (props) => (
     <Section row nopadding>
       <LeftSection>
         <SectionTitle main center>
-          Welcome To <br />
-          My Personal Portfolio
+          Hey there,
         </SectionTitle>
         <SectionText>
-        The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+          This is Vipul Jha from New Delhi, India. I am the co-founder of <b><a href="https://hexoncode.com" target="_blank">Hexoncode</a></b>. I develop Apps, Kernels, ROMs, and Scripts.
         </SectionText>
-        <Button onClick={props.handleClick}>Learn More</Button>
+        <Button onClick={(e) => {
+          e.preventDefault();
+          window.location.href = 'https://www.vipuljha.com/files/resume.pdf';
+        }}>My Resume</Button>
       </LeftSection>
     </Section>
   </>
