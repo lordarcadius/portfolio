@@ -44,9 +44,14 @@ export const List = styled.ul`
   }
   
   @media ${props => props.theme.breakpoints.sm}{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+  }
+
+  @media ${props => props.theme.breakpoints.xs}{
     display: flex;
     flex-direction: column;
-    margin: 32px 0;
   }
 `
 
@@ -81,7 +86,7 @@ export const ListTitle = styled.h4`
 }
 `
 
-export const ListParagraph = styled.p`
+export const ListParagraph = styled.div`
   font-size: 18px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.75);
