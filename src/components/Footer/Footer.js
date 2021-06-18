@@ -21,7 +21,7 @@ const Footer = () => {
             </SocialIcons>
           </SocialContainer>
         </SocialIconsContainer>
-        {/*         <LinkColumn>
+        {/*<LinkColumn>
           <LinkTitle>Call</LinkTitle>
           <LinkItem href="tel:314-343-3432">314-343-3432</LinkItem>
         </LinkColumn> */}

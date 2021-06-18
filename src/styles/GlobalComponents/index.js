@@ -279,3 +279,7 @@ export const LinkIconImg = styled.div`
     height: ${({ large }) => large ? '32px' : '16px'};
   }
 `
+
+export const Link = styled.a`
+  color: ${(props) => props.theme.colors.link}
+`;
