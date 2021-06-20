@@ -31,7 +31,21 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en-GB'>
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+          <meta name="Vipul Jha" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I develop Apps, Kernels, ROMs, and Scripts." />
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I develop Apps, Kernels, ROMs, and Scripts." key="twcard" />
+          <meta name="twitter:creator" content="lordarcadius" key="twhandle" />
+
+          {/* Open Graph */}
+          <meta property="og:url" content="https://www.vipuljha.com" key="ogurl" />
+          <meta property="og:image" content="/images/banner.jpg" key="ogimage" />
+          <meta property="og:site_name" content="Vipul Jha" key="ogsitename" />
+          <meta property="og:title" content="Vipul Jha" key="ogtitle" />
+          <meta property="og:description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I develop Apps, Kernels, ROMs, and Scripts." key="ogdesc" />
+
+          <title>Vipul Jha</title>
+          <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />
