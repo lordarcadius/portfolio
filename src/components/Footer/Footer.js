@@ -1,6 +1,6 @@
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import {Link } from '../../styles/GlobalComponents';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
+import { Link } from '../../styles/GlobalComponents';
 import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
 
@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <LinkList>
-      <LinkColumn>
+        <LinkColumn>
           <LinkTitle>Chat</LinkTitle>
           <LinkItem href="https://t.me/lordarcadius">Telegram</LinkItem>
         </LinkColumn>
@@ -32,6 +32,9 @@ const Footer = () => {
           </SocialIcons>
           <SocialIcons href="https://www.instagram.com/lordarcadius">
             <AiFillInstagram size="3rem" />
+          </SocialIcons>
+          <SocialIcons href="https://www.twitter.com/lordarcadius">
+            <AiFillTwitterCircle size="3rem" />
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
