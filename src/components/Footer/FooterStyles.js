@@ -29,13 +29,13 @@ export const LinkItem = styled.a`
 	}
 
 	@media ${props => props.theme.breakpoints.md} {
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 28px;
 		display: flex;
 	}
 
 	@media ${props => props.theme.breakpoints.sm} {
-		font-size: 8px;
+		font-size: 15px;
 		line-height: 14px;
 		margin-bottom: 8px;
 		display: flex;
@@ -87,16 +87,16 @@ export const Slogan = styled.p`
 	letter-spacing: 0.02em;
 	font-size: 18px;
 	line-height: 30px;
-	padding: 1rem;
+	padding-top: 1rem;
 
 	@media ${props => props.theme.breakpoints.md}{
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 28px;
 	}
 
 	@media ${props => props.theme.breakpoints.sm}{
 		line-height: 22px;
-		font-size: 14px;
+		font-size: 15px;
 		min-width: 100px;
 	}
 `
