@@ -23,6 +23,8 @@ export default function App({ Component, pageProps }) {
           <meta property="og:title" content="Vipul Jha - Co-founder, Hexoncode" />
           <meta property="og:description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I develop Apps, Kernels, ROMs, and Scripts." />
           <meta property="og:image" content="https://www.vipuljha.com/images/banner.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
     </Head>
       <Theme>
         <Component {...pageProps} />
