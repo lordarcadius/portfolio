@@ -1,5 +1,5 @@
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/lordarcadius/portfolio/blob/master/LICENSE)
 
   
 # Personal Portfolio
@@ -50,6 +50,6 @@ Please make sure to maintain `authorship`.
   
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/lordarcadius/portfolio/blob/master/LICENSE)
 
   
