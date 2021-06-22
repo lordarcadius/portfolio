@@ -33,14 +33,14 @@ export default class MyDocument extends Document {
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
           <meta name="title" content="Vipul Jha - Co-founder, Hexoncode" />
-          <meta name="description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I develop Apps, Kernels, ROMs, and Scripts." />
+          <meta name="description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I work on Apps, Kernels, ROMs, and Scripts." />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Vipul Jha - Co-founder, Hexoncode" />
-          <meta property="og:description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I develop Apps, Kernels, ROMs, and Scripts." />
+          <meta property="og:description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I work on Apps, Kernels, ROMs, and Scripts." />
           <meta property="og:image" content="https://www.vipuljha.com/images/banner.png" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:title" content="Vipul Jha - Co-founder, Hexoncode" />
-          <meta property="twitter:description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I develop Apps, Kernels, ROMs, and Scripts." />
+          <meta property="twitter:description" content="Hey there, This is Vipul Jha. I am the co-founder of Hexoncode. I work on Apps, Kernels, ROMs, and Scripts." />
           <meta property="twitter:image" content="https://www.vipuljha.com/images/banner.png" />
         </Head>
         <body>
