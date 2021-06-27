@@ -79,7 +79,7 @@ export const BoxText = styled.p`
   };
 
   @media ${props => props.theme.breakpoints.sm} {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 14px;
   }
 `

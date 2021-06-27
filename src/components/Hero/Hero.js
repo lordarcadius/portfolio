@@ -14,7 +14,7 @@ const Hero = (props) => (
         <SectionText>
           This is Vipul Jha from New Delhi, India. I am the co-founder of <b>
             <Link href="https://hexoncode.com" target="_blank">Hexoncode</Link></b>.
-          I develop Apps, Kernels, ROMs, and Scripts.
+          I work on Apps, Kernels, ROMs, & Scripts.
         </SectionText>
         <Button onClick={(e) => {
           e.preventDefault();
