@@ -6,6 +6,8 @@
 
 A portfolio built in React and NextJS. Simple, clean and fast.
 
+**Note: The logo and banner used in the project are my intellectual property. Please refrain from using it anywhere.**
+
 
 
 ![App Screenshot](https://i.ibb.co/tM4chbH/Screenshot-20210621-232737.png)
