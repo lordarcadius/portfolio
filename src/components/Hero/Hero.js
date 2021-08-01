@@ -12,7 +12,7 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
         <SectionText>
-          This is Vipul Jha from New Delhi, India. I am the co-founder of <b>
+          This is Vipul Jha from New Delhi, India. I am the Co-founder of <b>
             <Link href="https://hexoncode.com" target="_blank">Hexoncode</Link></b>.
           I work on Apps, Kernels, ROMs, & Scripts.
         </SectionText>
