@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'Covid-19 Status App',
-    description: "COVID-19 Status is a free, open-source Android application that shows the current state of COVID-19 in India and the world. It has a beautiful, simple, and fast UI.",
+    description: "COVID-19 Status is a free, open-source Android application that shows the current state of COVID-19 in India and the world. It has a beautiful, simple, fast, and responsive UI.",
     image: '/images/covid.jpg',
     tags: ['Java', 'XML', 'Firebase', 'Rest API'],
     source: 'https://github.com/Coders-Of-XDA-OT/covid19-status-android',
@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     title: 'Portfolio Website',
-    description: "This is my personal portfolio website that has all my work and project experience, including my resume. It was my main portfolio before.",
+    description: "This was my personal portfolio website that has all my work and project experience, including my resume. It used to be my main portfolio before deploying this current portfolio.",
     image: '/images/portfolio.jpg',
     tags: ['HTML', 'CSS', 'Bootstrap', 'JQuery'],
     source: 'https://github.com/lordarcadius/website',
@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     title: 'ABS Tweaks',
-    description: "ABS Tweaks or Arkaynine Boost Script is a collection of shell scripts written with the aim of enhancing the performance and battery life of an Android phone.",
+    description: "ABS Tweaks or Arkaynine Boost Script is a collection of shell scripts written with the aim of enhancing the performance and battery life of an Android phone. It got 2 Lac+ downloads overall.",
     image: '/images/abs.jpg',
     tags: ['Shell', 'Busybox'],
     source: 'https://github.com/lordarcadius/ABS-Tweaks',
@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     title: 'ElectraBlue Kernel',
-    description: "ElectraBlue is a flash & forget custom kernel for supported Android devices. It was developed with the aim to provide a stable, fluid, & efficient experience.",
+    description: "ElectraBlue is a flash & forget custom kernel for supported Android devices. It was developed with the aim to provide a stable, fluid, & battery-efficient experience with customizations.",
     image: '/images/eb.jpg',
     tags: ['Linux', 'C', 'Makefile', 'Bash'],
     source: 'https://github.com/lordarcadius/electrablue_mido',
@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     title: 'Lenovo SNAPit',
-    description: "Lenovo SNAPit Camera was one of the finest OEM camera apps back in those days. It had tonnes of features. I ported it to work on almost all devices at that time.",
+    description: "Lenovo SNAPit Camera was one of the finest OEM camera apps back in those days. It had tonnes of unique and amazing features. I ported it to work on almost all devices at that time.",
     image: '/images/snapit.jpg',
     tags: ['Java', 'Libs', 'Smali'],
     source: '#',
@@ -46,7 +46,7 @@ export const projects = [
   },
   {
     title: 'CyanogenOS Apps',
-    description: "CyanogenOS 12.1 had a set of exclusive apps like a new theme engine and a new dialer. I ported it to work with CyanogenMod 13 and CM 13 based ROMs.",
+    description: "CyanogenOS 12.1 had a set of exclusive apps like a new theme engine and a new Truecaller integrated dialer. I ported it to work with CyanogenMod 13 and CM 13 based ROMs.",
     image: '/images/capps.jpg',
     tags: ['Java', 'Libs'],
     source: '#',
@@ -61,6 +61,6 @@ export const TimeLineData = [
   { year: 2017, text: 'Worked intensively on ROMs & Kernels', },
   { year: 2018, text: 'Learned Android app development', },
   { year: 2019, text: 'Finished Diploma in Computer Engineering', },
-  { year: 2020, text: 'Established a startup with friends', },
+  { year: 2020, text: 'Got a scholarship from the Delhi government', },
   { year: 2021, text: 'Still trying to figure out 2021', },
 ];
