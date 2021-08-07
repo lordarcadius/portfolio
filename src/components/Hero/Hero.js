@@ -12,9 +12,7 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
         <SectionText>
-          This is Vipul Jha from New Delhi, India. I am the Co-founder of <b>
-            <Link href="https://hexoncode.com" target="_blank">Hexoncode</Link></b>.
-          I work on Apps, Kernels, ROMs, & Scripts.
+        Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts
         </SectionText>
         <Button onClick={(e) => {
           e.preventDefault();
