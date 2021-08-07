@@ -19,7 +19,7 @@ row-gap: 3rem;
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  padding-bottom: 0;
+  padding-bottom: 1.5rem;
 }
 
 `
