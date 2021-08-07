@@ -8,7 +8,7 @@ const NavDropDown = (props) => (
   <DropDownContainer active={props.isOpen}>
     <DropDownItem href="#" target="_blank" rel="noreferrer">
       <DropDownIcon>
-        <AiFillPhone/>
+        <AiFillPhone />
       </DropDownIcon>
       <DropDownTextContainer>
         <DropDownItemTitle>Phone</DropDownItemTitle>
@@ -17,7 +17,7 @@ const NavDropDown = (props) => (
     </DropDownItem>
     <DropDownItem href="#" target="_blank" rel="noreferrer">
       <DropDownIcon>
-      <AiOutlineMail/>
+        <AiOutlineMail />
       </DropDownIcon>
       <DropDownTextContainer>
         <DropDownItemTitle>Email</DropDownItemTitle>
@@ -26,7 +26,7 @@ const NavDropDown = (props) => (
     </DropDownItem>
     <DropDownItem href="#" target="_blank" rel="noreferrer">
       <DropDownIcon>
-      <FaLocationArrow/>
+        <FaLocationArrow />
       </DropDownIcon>
       <DropDownTextContainer>
         <DropDownItemTitle>Address</DropDownItemTitle>
