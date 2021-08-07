@@ -83,8 +83,8 @@ export const CarouselItemTitle = styled.h4`
   }
   
   @media ${props => props.theme.breakpoints.sm} {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 28px;
   }
 `
 export const CarouselItemImg = styled.svg`
@@ -112,8 +112,8 @@ export const CarouselItemText = styled.p`
     padding-right: 32px;
   }
   @media ${props => props.theme.breakpoints.sm} {
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 11px;
+    line-height: 18px;
     padding-right: 0;
   }
 `
