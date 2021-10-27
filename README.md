@@ -10,7 +10,7 @@ A portfolio built in React and NextJS. Simple, clean and fast.
 
 
 
-![App Screenshot](https://i.ibb.co/tM4chbH/Screenshot-20210621-232737.png)
+![App Screenshot](https://i.ibb.co/jRRNMkH/Screenshot-from-2021-10-27-18-45-14.png)
 
   
 ## Demo
