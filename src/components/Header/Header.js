@@ -29,9 +29,7 @@ const Header = () => (
         </Link>
       </li>
       <li>
-        <a href="https://blog.vipuljha.com">
-          <NavLink>Blog</NavLink>
-        </a>
+        <NavLink href="https://blog.vipuljha.com">Blog</NavLink>
       </li>
     </Div2>
     <Div3>
