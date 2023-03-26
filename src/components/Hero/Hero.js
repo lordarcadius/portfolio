@@ -12,7 +12,7 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
         <SectionText>
-          Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts.
+        I'm Vipul Jha, also known as lordarcadius. I'm an Android & Flutter developer from Delhi, India with experience in ROMs, Kernels, & Scripts. I'm passionate about contributing to open-source projects and helping the developer community on Facebook and Telegram.
         </SectionText>
         <Button onClick={(e) => {
           e.preventDefault();

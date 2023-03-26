@@ -44,7 +44,6 @@ export const LinkItem = styled.a`
 `
 
 export const SocialIconsContainer = styled.div`
-max-width: 1040px;
 display: flex;
 justify-content: space-between;
 
