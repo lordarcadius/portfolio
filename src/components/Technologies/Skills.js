@@ -1,5 +1,5 @@
-import { DiAndroid, DiTerminal } from "react-icons/di";
-import { SiJava, SiFirebase, SiGit } from "react-icons/si";
+import { DiAndroid, DiTerminal, DiJava } from "react-icons/di";
+import { SiFirebase, SiGit } from "react-icons/si";
 import { RiFlutterFill } from "react-icons/ri";
 
 export const Skills = [
@@ -17,7 +17,7 @@ export const Skills = [
   },
   {
     slug: "java",
-    Component: SiJava,
+    Component: DiJava,
     title: "Java",
     Description: () => <>I can code in Java. But I mainly use it for Android app development.</>,
   },
