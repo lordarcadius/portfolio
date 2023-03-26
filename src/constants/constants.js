@@ -62,7 +62,7 @@ export const TimeLineData = [
   { year: 2018, text: 'Learned Android app development.', },
   { year: 2019, text: 'Finished Diploma in Computer Engineering.', },
   { year: 2020, text: 'Aquired new skills while trying not to catch COVID-19', },
-  { year: 2021, text: 'Survived COVID-19 and got my first Job.', },
+  { year: 2021, text: 'Survived COVID-19 and got my first Job at Primebook.', },
   { year: 2022, text: 'Completed B.Tech in Information Technology.', },
   { year: 2023, text: 'Year under progress....', },
 ];
