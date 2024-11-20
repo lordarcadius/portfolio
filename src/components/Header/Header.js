@@ -31,9 +31,9 @@ const Header = () => (
         </Link>
       </li>
       <li>
-        <a href="https://blog.vipuljha.com">
+        <Link suppressHydrationWarning={true} href="https://blog.vipuljha.com" legacyBehavior>
           <NavLink>Blog</NavLink>
-        </a>
+        </Link>
       </li>
     </Div2>
     <Div3>
