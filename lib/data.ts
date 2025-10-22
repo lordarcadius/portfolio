@@ -1,4 +1,3 @@
-// lib/data.ts
 export const experienceData = [
   {
     role: "Full-Stack Developer",
