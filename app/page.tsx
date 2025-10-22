@@ -1,15 +1,16 @@
-// app/page.tsx
 import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Skills } from "@/components/sections/Skills";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col space-y-24">
       <Hero />
+      <About />
+      <Skills />
 
       {/* We will add other sections below */}
-      {/* <About />
-      <Skills />
-      <Projects />
+      {/* <Projects />
       <Experience />
       <Contact /> 
       */}

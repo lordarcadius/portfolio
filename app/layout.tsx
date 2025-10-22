@@ -1,11 +1,10 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import { Header } from "@/components/layout/Header"; // Import Header
-import { Footer } from "@/components/layout/Footer"; // Import Footer
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +17,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // ... (metadata remains the same)
   title: {
     default: "Vipul Jha - Full-Stack Developer",
     template: "%s | Vipul Jha",
@@ -30,7 +28,7 @@ export const metadata: Metadata = {
     description: "Personal portfolio website.",
     type: "website",
     locale: "en_US",
-    url: "https://www.vipuljha.com", // Change to your domain later
+    url: "https://www.vipuljha.com",
   },
 };
 
