@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion"; // Import Variants
+import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const fadeIn: Variants = {

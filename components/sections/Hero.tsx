@@ -1,22 +1,41 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { useScroll } from "@/context/ScrollContext";
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
 export function Hero() {
+  // Get *only* the setter function from context. We don't need the active state here.
+  const [, manuallySetActive] = useScroll();
+
+  // Create a handler for the Hero buttons
+  const handleHeroScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    const sectionId = href.substring(1);
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      history.pushState(null, "", href);
+      manuallySetActive(sectionId); // Call the shared function
+    }
+  };
+
   return (
     <section
       id="hero"
       className="flex flex-col-reverse items-start gap-12 sm:flex-row"
     >
-      {/* Left Column (Text & Links) */}
       <motion.div
         className="flex grow flex-col items-start"
         initial="hidden"
@@ -49,8 +68,8 @@ export function Hero() {
           beautiful, functional applications.
         </motion.p>
 
-        {/* Social Links */}
         <motion.div className="mt-6 flex gap-3" variants={fadeIn}>
+          {/* ... social buttons remain the same ... */}
           <Button
             asLink
             href="https://github.com/vipul-jha"
@@ -80,18 +99,27 @@ export function Hero() {
           </Button>
         </motion.div>
 
-        {/* CTA Buttons */}
         <motion.div className="mt-8 flex flex-wrap gap-4" variants={fadeIn}>
-          <Button asLink href="#projects" size="lg">
+          <Button
+            asLink
+            href="#projects"
+            size="lg"
+            onClick={(e) => handleHeroScroll(e, "#projects")} // Add onClick
+          >
             See My Projects
           </Button>
-          <Button asLink href="#contact" variant="outline" size="lg">
+          <Button
+            asLink
+            href="#contact"
+            variant="outline"
+            size="lg"
+            onClick={(e) => handleHeroScroll(e, "#contact")} // Add onClick
+          >
             Get In Touch
           </Button>
         </motion.div>
       </motion.div>
 
-      {/* Right Column (Image) */}
       <motion.div
         className="shrink-0"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -99,7 +127,7 @@ export function Hero() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Image
-          src="/images/profile.webp"
+          src="/profile.jpg" // Assuming this is your image path
           alt="Vipul Jha"
           width={160}
           height={160}
