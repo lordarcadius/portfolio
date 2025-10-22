@@ -12,10 +12,8 @@ const fadeIn: Variants = {
 };
 
 export function Hero() {
-  // Get *only* the setter function from context. We don't need the active state here.
   const [, manuallySetActive] = useScroll();
 
-  // Create a handler for the Hero buttons
   const handleHeroScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
@@ -26,8 +24,7 @@ export function Hero() {
 
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      history.pushState(null, "", href);
-      manuallySetActive(sectionId); // Call the shared function
+      manuallySetActive(sectionId);
     }
   };
 
@@ -69,7 +66,6 @@ export function Hero() {
         </motion.p>
 
         <motion.div className="mt-6 flex gap-3" variants={fadeIn}>
-          {/* ... social buttons remain the same ... */}
           <Button
             asLink
             href="https://github.com/vipul-jha"
@@ -104,7 +100,7 @@ export function Hero() {
             asLink
             href="#projects"
             size="lg"
-            onClick={(e) => handleHeroScroll(e, "#projects")} // Add onClick
+            onClick={(e) => handleHeroScroll(e, "#projects")}
           >
             See My Projects
           </Button>
@@ -113,7 +109,7 @@ export function Hero() {
             href="#contact"
             variant="outline"
             size="lg"
-            onClick={(e) => handleHeroScroll(e, "#contact")} // Add onClick
+            onClick={(e) => handleHeroScroll(e, "#contact")}
           >
             Get In Touch
           </Button>
@@ -127,7 +123,7 @@ export function Hero() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Image
-          src="/profile.jpg" // Assuming this is your image path
+          src="/profile.jpg"
           alt="Vipul Jha"
           width={160}
           height={160}

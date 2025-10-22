@@ -2,26 +2,51 @@
 
 import { useState, useEffect, useRef } from "react";
 
+const getInitialActiveSection = (sectionIds: string[]) => {
+  if (typeof window !== "undefined") {
+    const initialHash = window.location.hash.substring(1);
+    if (initialHash && sectionIds.includes(initialHash)) {
+      return initialHash;
+    }
+  }
+  return "";
+};
+
 export function useScrollActive(sectionIds: string[]) {
-  const [activeSection, setActiveSection] = useState("");
-  // This state will act as our "pause" button for the observer
+  const [activeSection, setActiveSection] = useState(() =>
+    getInitialActiveSection(sectionIds)
+  );
+
   const [isManualScroll, setIsManualScroll] = useState(false);
   const scrollTimer = useRef<NodeJS.Timeout | null>(null);
+  const intersectingSections = useRef(new Set<string>());
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // If we are in a "manual scroll" state, ignore the observer
         if (isManualScroll) return;
 
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            intersectingSections.current.add(entry.target.id);
+          } else {
+            intersectingSections.current.delete(entry.target.id);
           }
         });
+
+        const firstIntersecting = sectionIds.find((id) =>
+          intersectingSections.current.has(id)
+        );
+
+        if (firstIntersecting) {
+          setActiveSection(firstIntersecting);
+        }
       },
       {
-        rootMargin: "-30% 0px -40% 0px",
+        // CHANGED: This new margin defines a large active zone in the
+        // middle 60% of the viewport (from 20% top to 20% bottom).
+        // This is large enough to "see" the Contact section at the bottom.
+        rootMargin: "-20% 0px -20% 0px",
       }
     );
 
@@ -43,29 +68,24 @@ export function useScrollActive(sectionIds: string[]) {
         clearTimeout(scrollTimer.current);
       }
     };
-    // We add isManualScroll as a dependency. When it changes,
-    // the observer effect logic re-evaluates.
   }, [sectionIds, isManualScroll]);
 
-  // We export a new function to be called by the Header
   const manuallySetActive = (id: string) => {
-    // Clear any old timer
     if (scrollTimer.current) {
       clearTimeout(scrollTimer.current);
     }
 
-    // 1. Set the "pause" state to true
     setIsManualScroll(true);
-    // 2. Set the active section immediately
     setActiveSection(id);
+    intersectingSections.current.clear();
+    if (id) {
+      intersectingSections.current.add(id);
+    }
 
-    // 3. After 1 second (enough time for the scroll to finish),
-    //    set the "pause" state back to false, re-enabling the observer.
     scrollTimer.current = setTimeout(() => {
       setIsManualScroll(false);
-    }, 1000);
+    }, 800);
   };
 
-  // We only return the value and our new manual setter function
   return [activeSection, manuallySetActive] as const;
 }
