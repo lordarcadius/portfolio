@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Skills } from "@/components/sections/Skills";
 import { Experience } from "@/components/sections/Experience";
+import { Projects } from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -10,11 +11,10 @@ export default function Home() {
       <About />
       <Skills />
       <Experience />
+      <Projects />
 
       {/* We will add other sections below */}
-      {/* <Projects />
-      <Contact /> 
-      */}
+      {/* <Contact /> */}
     </div>
   );
 }

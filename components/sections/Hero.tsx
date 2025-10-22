@@ -99,7 +99,7 @@ export function Hero() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Image
-          src="/profile.webp"
+          src="/images/profile.webp"
           alt="Vipul Jha"
           width={160}
           height={160}
