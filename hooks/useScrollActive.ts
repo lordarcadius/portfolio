@@ -19,7 +19,7 @@ export function useScrollActive(sectionIds: string[]) {
 
   const [isManualScroll, setIsManualScroll] = useState(false);
   const scrollTimer = useRef<NodeJS.Timeout | null>(null);
-  const intersectingSections = useRef(new Set<string>());
+  const intersectingSections = useRef(new Map<string, number>());
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,25 +27,28 @@ export function useScrollActive(sectionIds: string[]) {
         if (isManualScroll) return;
 
         entries.forEach((entry) => {
+          const id = entry.target.id;
           if (entry.isIntersecting) {
-            intersectingSections.current.add(entry.target.id);
+            intersectingSections.current.set(id, entry.intersectionRatio);
           } else {
-            intersectingSections.current.delete(entry.target.id);
+            intersectingSections.current.delete(id);
           }
         });
 
-        const firstIntersecting = sectionIds.find((id) =>
-          intersectingSections.current.has(id)
-        );
+        let bestId: string | null = null;
+        let bestRatio = -1;
+        intersectingSections.current.forEach((ratio, id) => {
+          if (ratio > bestRatio) {
+            bestRatio = ratio;
+            bestId = id;
+          }
+        });
 
-        if (firstIntersecting) {
-          setActiveSection(firstIntersecting);
+        if (bestId) {
+          setActiveSection(bestId);
         }
       },
       {
-        // CHANGED: This new margin defines a large active zone in the
-        // middle 60% of the viewport (from 20% top to 20% bottom).
-        // This is large enough to "see" the Contact section at the bottom.
         rootMargin: "-20% 0px -20% 0px",
       }
     );
@@ -70,6 +73,28 @@ export function useScrollActive(sectionIds: string[]) {
     };
   }, [sectionIds, isManualScroll]);
 
+  useEffect(() => {
+    const clearManual = () => {
+      if (isManualScroll) {
+        if (scrollTimer.current) {
+          clearTimeout(scrollTimer.current);
+          scrollTimer.current = null;
+        }
+        setIsManualScroll(false);
+      }
+    };
+
+    window.addEventListener("wheel", clearManual, { passive: true });
+    window.addEventListener("touchstart", clearManual, { passive: true });
+    window.addEventListener("keydown", clearManual, { passive: true });
+
+    return () => {
+      window.removeEventListener("wheel", clearManual);
+      window.removeEventListener("touchstart", clearManual);
+      window.removeEventListener("keydown", clearManual);
+    };
+  }, [isManualScroll]);
+
   const manuallySetActive = (id: string) => {
     if (scrollTimer.current) {
       clearTimeout(scrollTimer.current);
@@ -79,7 +104,7 @@ export function useScrollActive(sectionIds: string[]) {
     setActiveSection(id);
     intersectingSections.current.clear();
     if (id) {
-      intersectingSections.current.add(id);
+      intersectingSections.current.set(id, 1);
     }
 
     scrollTimer.current = setTimeout(() => {

@@ -13,6 +13,7 @@ const navLinks = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
+  { href: "https://blog.vipuljha.com/", label: "Blog", external: true },
 ];
 
 export function Header() {
@@ -24,12 +25,22 @@ export function Header() {
     href: string
   ) => {
     e.preventDefault();
+    if (/^https?:\/\//.test(href)) {
+      window.open(href, "_blank", "noopener,noreferrer");
+      setIsMobileMenuOpen(false);
+      return;
+    }
+
     const sectionId = href.substring(1);
     const element = document.getElementById(sectionId);
 
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      // history.pushState(null, "", href); // REMOVED
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.clientHeight : 80;
+      const rect = element.getBoundingClientRect();
+      const target = window.scrollY + rect.top - headerHeight - 8; // small gap
+
+      window.scrollTo({ top: target, behavior: "smooth" });
       manuallySetActive(sectionId);
       setIsMobileMenuOpen(false);
     }
@@ -38,7 +49,6 @@ export function Header() {
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
-    // history.pushState(null, "", "/"); // REMOVED
     manuallySetActive("");
     setIsMobileMenuOpen(false);
   };
