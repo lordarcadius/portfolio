@@ -13,7 +13,6 @@ const navLinks = [
 ];
 
 export function Header() {
-  // Get state and setter from the context
   const [activeSection, manuallySetActive] = useScroll();
 
   const handleScroll = (
@@ -32,8 +31,22 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-b-foreground/10 bg-background/80 backdrop-blur-xs">
-      <div className="container mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
+    <header className="fixed top-0 left-0 z-50 w-full px-4 pt-4">
+      {/* 1. Reduced blur to backdrop-blur-lg and added saturate-150 */}
+      <div
+        className="
+          container 
+          mx-auto 
+          flex max-w-3xl items-center justify-between 
+          rounded-full 
+          bg-background/40 
+          px-6 py-3 
+          backdrop-blur-lg 
+          backdrop-saturate-150 
+          shadow-lg shadow-black/5 
+          ring-1 ring-foreground/10
+        "
+      >
         <Link
           href="/"
           className="font-mono text-lg font-medium transition-colors hover:text-foreground/80"
@@ -47,7 +60,7 @@ export function Header() {
           Vipul Jha
         </Link>
 
-        <nav className="flex items-center space-x-2 sm:space-x-4">
+        <nav className="flex items-center space-x-2 sm:ml-6 sm:space-x-4">
           <div className="hidden space-x-2 sm:flex sm:space-x-4">
             {navLinks.map((link) => (
               <Link
@@ -55,9 +68,11 @@ export function Header() {
                 href={link.href}
                 onClick={(e) => handleScroll(e, link.href)}
                 className={cn(
-                  "rounded-full px-3 py-1.5 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground",
+                  "rounded-full px-3 py-1.5 text-sm font-medium text-foreground/70 transition-all hover:text-foreground",
+                  // 2. Made active link background explicitly light/dark and 10% opacity.
+                  // This will create a light glass pill in dark mode.
                   activeSection === link.href.substring(1) &&
-                    "bg-foreground/10 text-foreground"
+                    "bg-black/4 dark:bg-white/4 text-foreground ring-1 ring-black/20 dark:ring-white/20"
                 )}
               >
                 {link.label}

@@ -18,7 +18,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // ... (metadata remains the same)
+  title: {
+    default: "Vipul Jha - Full-Stack Developer",
+    template: "%s | Vipul Jha",
+  },
+  description:
+    "Portfolio of Vipul Jha, a full-stack developer specializing in modern web technologies like Next.js, React, and TypeScript.",
+  openGraph: {
+    title: "Vipul Jha - Full-Stack Developer",
+    description: "Personal portfolio website.",
+    type: "website",
+    locale: "en_US",
+    url: "https://www.vipuljha.com",
+  },
 };
 
 export default function RootLayout({
@@ -29,13 +41,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground relative overflow-x-hidden`}
       >
+        {/* We have removed the decorative blur blobs from here */}
+
         <ThemeProvider>
-          {/* Wrap Header and main with the ScrollProvider */}
           <ScrollProvider>
             <Header />
-            <main className="container mx-auto max-w-3xl px-4 pt-24 pb-16">
+            <main className="container mx-auto max-w-3xl px-4 pt-32 pb-16">
               {children}
             </main>
             <Footer />
