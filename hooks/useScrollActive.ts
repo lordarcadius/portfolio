@@ -2,21 +2,13 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const getInitialActiveSection = (sectionIds: string[]) => {
-  if (typeof window !== "undefined") {
-    const initialHash = window.location.hash.substring(1);
-    if (initialHash && sectionIds.includes(initialHash)) {
-      return initialHash;
-    }
-  }
-  return "";
-};
-
 export function useScrollActive(sectionIds: string[]) {
-  const [activeSection, setActiveSection] = useState(() =>
-    getInitialActiveSection(sectionIds)
-  );
-
+  // Initialize state based on hash if available, empty string otherwise
+  const [activeSection, setActiveSection] = useState(() => {
+    if (typeof window === "undefined") return "";
+    const hash = window.location.hash.substring(1);
+    return hash && sectionIds.includes(hash) ? hash : "";
+  });
   const [isManualScroll, setIsManualScroll] = useState(false);
   const scrollTimer = useRef<NodeJS.Timeout | null>(null);
   const intersectingSections = useRef(new Map<string, number>());
