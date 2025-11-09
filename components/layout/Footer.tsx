@@ -1,10 +1,4 @@
-import Link from "next/link";
-
-const socialLinks = [
-  { href: "https://github.com/vipul-jha", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/vipul-jha-dev/", label: "LinkedIn" },
-  { href: "mailto:vipul@vipuljha.com", label: "Email" },
-];
+import { SocialLinks } from "@/components/common/SocialLinks";
 
 export function Footer() {
   return (
@@ -13,18 +7,8 @@ export function Footer() {
         <p className="text-sm text-foreground/70">
           © {new Date().getFullYear()} Vipul Jha. All rights reserved.
         </p>
-        <div className="mt-4 flex space-x-4 sm:mt-0">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-foreground/70 transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="mt-4 sm:mt-0">
+          <SocialLinks iconSize={18} />
         </div>
       </div>
     </footer>

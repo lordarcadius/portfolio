@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { SocialLinks } from "@/components/common/SocialLinks";
 import { useScroll } from "@/context/ScrollContext";
 
 const fadeIn: Variants = {
@@ -65,34 +65,8 @@ export function Hero() {
           beautiful, functional applications.
         </motion.p>
 
-        <motion.div className="mt-6 flex gap-3" variants={fadeIn}>
-          <Button
-            asLink
-            href="https://github.com/vipul-jha"
-            variant="outline"
-            size="icon"
-            aria-label="GitHub"
-          >
-            <Github className="h-5 w-5" />
-          </Button>
-          <Button
-            asLink
-            href="https://www.linkedin.com/in/vipul-jha-dev/"
-            variant="outline"
-            size="icon"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5" />
-          </Button>
-          <Button
-            asLink
-            href="mailto:vipul@vipuljha.com"
-            variant="outline"
-            size="icon"
-            aria-label="Email"
-          >
-            <Mail className="h-5 w-5" />
-          </Button>
+        <motion.div className="mt-6" variants={fadeIn}>
+          <SocialLinks iconSize={20} showCircle />
         </motion.div>
 
         <motion.div className="mt-8 flex flex-wrap gap-4" variants={fadeIn}>
