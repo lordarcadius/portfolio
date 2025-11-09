@@ -5,13 +5,19 @@ export function Experience() {
   return (
     <SectionWrapper id="experience" title="Work Experience">
       <div className="relative flex flex-col gap-12">
-        {/* This div creates the vertical timeline bar */}
-        <div className="absolute left-3.5 top-2 z-0 h-full w-0.5 bg-foreground/15" />
+        {/* This div creates the vertical timeline bar - positioned to align with first dot */}
+        <div className="absolute left-[11px] top-[9px] bottom-[6px] z-0 w-[2px] bg-foreground/15" />
 
         {experienceData.map((item, index) => (
-          <div key={index} className="relative z-10 flex items-start gap-6">
+          <div
+            key={index}
+            className="relative z-10 flex gap-6"
+            style={{ marginTop: "2px" }}
+          >
             {/* This div creates the dot on the timeline */}
-            <div className="mt-1 h-4 w-4 shrink-0 rounded-full border-2 border-foreground/20 bg-background" />
+            <div className="relative h-6 w-6 shrink-0">
+              <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-foreground/20 bg-background" />
+            </div>
 
             {/* This div is the content card for the experience */}
             <div className="grow">
