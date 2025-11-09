@@ -60,7 +60,7 @@ export function Header() {
           className="
             container 
             mx-auto 
-            flex max-w-3xl items-center justify-between 
+            flex max-w-5xl items-center justify-between 
             rounded-full 
             bg-background/40 
             px-6 py-3 
