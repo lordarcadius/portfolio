@@ -52,7 +52,7 @@ export function ProjectCard({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40"
             aria-label={`View live demo of ${title}`}
           >
             <ExternalLink className="h-4 w-4" />
@@ -62,7 +62,7 @@ export function ProjectCard({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40"
             aria-label={`View GitHub repository for ${title}`}
           >
             <Github className="h-4 w-4" />

@@ -72,7 +72,7 @@ export function Header() {
         >
           <Link
             href="/"
-            className="font-mono text-lg font-medium transition-colors hover:text-foreground/80"
+            className="font-mono text-lg font-medium transition-colors hover:text-foreground/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40"
             onClick={handleHomeClick}
           >
             Vipul Jha
@@ -87,7 +87,7 @@ export function Header() {
                   href={link.href}
                   onClick={(e) => handleScroll(e, link.href)}
                   className={cn(
-                    "rounded-full px-3 py-1.5 text-sm font-medium text-foreground/70 transition-all hover:text-foreground",
+                    "rounded-full px-3 py-1.5 text-sm font-medium text-foreground/70 transition-all hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40",
                     activeSection === link.href.substring(1) &&
                       "bg-black/4 dark:bg-white/4 text-foreground ring-1 ring-black/20 dark:ring-white/20"
                   )}
@@ -103,8 +103,10 @@ export function Header() {
           <div className="sm:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-foreground/70 transition-colors hover:bg-foreground/10"
+              className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-foreground/70 transition-colors hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40"
               aria-label="Toggle navigation menu"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               <AnimatePresence initial={false} mode="wait">
                 <motion.div
@@ -136,14 +138,17 @@ export function Header() {
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="fixed inset-0 z-40 bg-background/80 pt-28 backdrop-blur-lg"
           >
-            <nav className="container mx-auto flex max-w-3xl flex-col items-start gap-6 px-4">
+            <nav
+              id="mobile-navigation"
+              className="container mx-auto flex max-w-3xl flex-col items-start gap-6 px-4"
+            >
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleScroll(e, link.href)}
                   className={cn(
-                    "w-full rounded-full py-3 px-6 text-left text-xl font-medium text-foreground/80 transition-all hover:text-foreground",
+                    "w-full rounded-full py-3 px-6 text-left text-xl font-medium text-foreground/80 transition-all hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40",
                     activeSection === link.href.substring(1) &&
                       "bg-black/4 dark:bg-white/4 text-foreground ring-1 ring-black/20 dark:ring-white/20"
                   )}

@@ -50,14 +50,17 @@ export function SocialLinks({
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "text-foreground/70 transition-colors hover:text-foreground",
+            "text-foreground/70 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40",
             showCircle &&
               "flex h-12 w-12 items-center justify-center rounded-full border border-foreground/10",
             showLabels ? "flex items-center gap-2" : ""
           )}
           aria-label={link.label}
         >
-          <link.icon className={iconClassName} size={iconSize} />
+          <link.icon
+            className={cn(iconClassName, "h-5 w-5")}
+            size={iconSize}
+          />
           {showLabels && <span className="text-sm">{link.label}</span>}
         </Link>
       ))}

@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #7c3aed;
+  /* violet-600 by default */
 }
 
 @theme inline {
@@ -17,4 +19,23 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --color-primary: #a78bfa;
+  /* lighter violet for dark mode */
+}
+
+/* Respect user preference for reduced motion: disable our custom animations */
+@media (prefers-reduced-motion: reduce) {
+
+  /* Turn off known animation utilities we use */
+  .animate-float,
+  .animate-spin-slow,
+  .animate-spin {
+    animation: none !important;
+  }
+
+  /* Minimize transitions/animations globally for reduced-motion users */
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }

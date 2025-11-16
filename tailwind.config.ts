@@ -20,6 +20,21 @@ const config: Config = {
       backdropBlur: {
         xs: "2px",
       },
+      keyframes: {
+        float: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        float: "float 3s ease-in-out infinite",
+        "spin-slow": "spin 8s linear infinite",
+      },
+      colors: {
+        // reference CSS variable so color can be toggled by theme classes
+        primary: "var(--color-primary)",
+      },
     },
   },
   plugins: [],

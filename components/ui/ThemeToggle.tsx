@@ -15,7 +15,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/10"
+      className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40"
       aria-label="Toggle dark mode"
       onClick={() =>
         setThemeWithCookie(resolvedTheme === "light" ? "dark" : "light")
