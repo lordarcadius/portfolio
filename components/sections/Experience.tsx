@@ -6,7 +6,7 @@ export function Experience() {
     <SectionWrapper id="experience" title="Work Experience">
       <div className="relative flex flex-col gap-12">
         {/* This div creates the vertical timeline bar - positioned to align with first dot */}
-        <div className="absolute left-[11px] top-[9px] bottom-[6px] z-0 w-[2px] bg-foreground/15" />
+        <div className="absolute left-[11px] top-[9px] bottom-1.5 z-0 w-0.5 bg-foreground/15" />
 
         {experienceData.map((item, index) => (
           <div

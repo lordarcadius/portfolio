@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -29,17 +30,22 @@ export const metadata: Metadata = {
     description: "Personal portfolio website.",
     type: "website",
     locale: "en_US",
-    url: "https://www.vipuljha.com",
+    url: "https://www.vipuljha.̥com",
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Read theme cookie server-side so the initial HTML class matches the user's last choice.
+  // This prevents a mismatch between server and client during hydration.
+  const themeCookie = (await cookies()).get("theme")?.value;
+  const initialThemeClass =
+    themeCookie === "dark" ? "dark" : themeCookie === "light" ? "" : "";
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${initialThemeClass} scroll-smooth`}>
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground relative overflow-x-hidden`}
