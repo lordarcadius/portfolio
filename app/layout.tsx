@@ -1,5 +1,5 @@
+import { ThemeHydration } from "@/components/providers/ThemeHydration";
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -39,28 +39,27 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Read theme cookie server-side so the initial HTML class matches the user's last choice.
-  // This prevents a mismatch between server and client during hydration.
-  const themeCookie = (await cookies()).get("theme")?.value;
-  const initialThemeClass =
-    themeCookie === "dark" ? "dark" : themeCookie === "light" ? "" : "";
+  // Remove server-side theme class logic. Let next-themes handle theme class on client.
+  // Wrap app in ThemeHydration to prevent hydration mismatch
   return (
-    <html lang="en" className={`${initialThemeClass} scroll-smooth`}>
+    <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground relative overflow-x-hidden`}
+        className={`scroll-smooth ${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground relative overflow-x-hidden`}
       >
         {/* We have removed the decorative blur blobs from here */}
 
-        <ThemeProvider>
-          <ScrollProvider>
-            <Header />
-            <main className="container mx-auto max-w-5xl px-4 pt-32 pb-16">
-              {children}
-            </main>
-            <Footer />
-          </ScrollProvider>
-        </ThemeProvider>
+        <ThemeHydration>
+          <ThemeProvider>
+            <ScrollProvider>
+              <Header />
+              <main className="container mx-auto max-w-5xl px-4 pt-32 pb-16">
+                {children}
+              </main>
+              <Footer />
+            </ScrollProvider>
+          </ThemeProvider>
+        </ThemeHydration>
       </body>
     </html>
   );
