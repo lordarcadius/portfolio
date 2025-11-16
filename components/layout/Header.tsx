@@ -136,14 +136,14 @@ export function Header() {
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="fixed inset-0 z-40 bg-background/80 pt-28 backdrop-blur-lg"
           >
-            <nav className="container mx-auto flex max-w-3xl flex-col items-center gap-6 px-4">
+            <nav className="container mx-auto flex max-w-3xl flex-col items-start gap-6 px-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleScroll(e, link.href)}
                   className={cn(
-                    "w-full rounded-full py-3 text-center text-xl font-medium text-foreground/80 transition-all hover:text-foreground",
+                    "w-full rounded-full py-3 px-6 text-left text-xl font-medium text-foreground/80 transition-all hover:text-foreground",
                     activeSection === link.href.substring(1) &&
                       "bg-black/4 dark:bg-white/4 text-foreground ring-1 ring-black/20 dark:ring-white/20"
                   )}
@@ -152,7 +152,9 @@ export function Header() {
                 </Link>
               ))}
               <div className="mt-4">
-                <ThemeToggle />
+                <div className="px-6">
+                  <ThemeToggle />
+                </div>
               </div>
             </nav>
           </motion.div>

@@ -53,7 +53,7 @@ export default async function RootLayout({
           <ThemeProvider>
             <ScrollProvider>
               <Header />
-              <main className="container mx-auto max-w-5xl px-4 pt-32 pb-16">
+              <main className="container mx-auto max-w-5xl px-4 sm:px-6 md:px-8 pt-32 pb-16">
                 {children}
               </main>
               <Footer />
