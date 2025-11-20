@@ -1,49 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --color-primary: #a78bfa;
-  /* lighter violet for dark mode */
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 4s ease-in-out infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
 }
 
+:root {
+  /* Dark theme by default - Zinc Palette */
+  --background: #09090b; /* Zinc 950 */
+  --foreground: #fafafa; /* Zinc 50 */
+  --primary: #8b5cf6; /* Violet 500 */
+  --secondary: #18181b; /* Zinc 900 */
+  --accent: #06b6d4; /* Cyan 500 */
+  --muted: #a1a1aa; /* Zinc 400 */
+  --border: #27272a; /* Zinc 800 */
+}
 
-/* Support light mode via .light class for next-themes */
+/* Support light mode via .light class */
 .light {
   --background: #ffffff;
-  --foreground: #171717;
-  --color-primary: #7c3aed;
-  /* violet-600 by default */
+  --foreground: #09090b;
+  --primary: #7c3aed; /* Violet 600 */
+  --secondary: #f4f4f5; /* Zinc 100 */
+  --accent: #0891b2; /* Cyan 600 */
+  --muted: #71717a; /* Zinc 500 */
+  --border: #e4e4e7; /* Zinc 200 */
 }
 
-/* Support dark mode via .dark class for next-themes */
+/* Support dark mode via .dark class (redundant but safe) */
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --color-primary: #a78bfa;
-  /* lighter violet for dark mode */
+  --background: #09090b;
+  --foreground: #fafafa;
+  --primary: #8b5cf6;
+  --secondary: #18181b;
+  --accent: #06b6d4;
+  --muted: #a1a1aa;
+  --border: #27272a;
 }
 
-/* Respect user preference for reduced motion: disable our custom animations */
-@media (prefers-reduced-motion: reduce) {
+/* Global styles */
+body {
+  @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+}
 
-  /* Turn off known animation utilities we use */
-  .animate-float,
-  .animate-spin-slow,
-  .animate-spin {
-    animation: none !important;
-  }
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-  /* Minimize transitions/animations globally for reduced-motion users */
-  *, *::before, *::after {
-    transition: none !important;
-    animation: none !important;
-  }
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-muted transition-colors;
 }

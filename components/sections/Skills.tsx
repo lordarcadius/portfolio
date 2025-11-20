@@ -1,57 +1,63 @@
 "use client";
 
-import { SectionWrapper } from "@/components/layout/SectionWrapper";
-import { motion, type Variants } from "framer-motion";
+import { Section } from "@/components/ui/Section";
+import { motion } from "framer-motion";
+import { TextReveal } from "@/components/ui/TextReveal";
+import { Card } from "@/components/ui/Card";
 
-const skillsList = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Express",
-  "Tailwind CSS",
-  "MongoDB",
-  "PostgreSQL",
-  "Prisma",
-  "Docker",
-  "Git",
-];
-
-const listVariants: Variants = {
-  visible: {
-    transition: {
-      staggerChildren: 0.05,
-    },
+const skills = [
+  {
+    category: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux"],
   },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 15 },
-  visible: { opacity: 1, y: 0 },
-};
+  {
+    category: "Backend",
+    items: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Prisma", "GraphQL"],
+  },
+  {
+    category: "DevOps & Tools",
+    items: ["Git", "Docker", "AWS", "Vercel", "Jest", "CI/CD"],
+  },
+];
 
 export function Skills() {
   return (
-    <SectionWrapper id="skills" title="My Toolkit">
-      <motion.ul
-        className="flex flex-wrap gap-3"
-        variants={listVariants} // This will now work
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        {skillsList.map((skill) => (
-          <motion.li
-            key={skill}
-            className="rounded-full border border-foreground/20 bg-foreground/5 px-4 py-2 text-base font-medium text-foreground/90 transition-colors hover:bg-foreground/10"
-            variants={itemVariants} // This will now work
-            whileHover={{ scale: 1.05 }}
+    <Section id="skills">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+          <TextReveal>My Toolkit</TextReveal>
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          I work with a modern stack to build robust and scalable applications.
+        </p>
+      </div>
+
+      <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {skills.map((category, index) => (
+          <motion.div
+            key={category.category}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            className="h-full"
           >
-            {skill}
-          </motion.li>
+            <Card className="h-full flex flex-col">
+              <h3 className="text-xl font-semibold mb-6 text-primary border-b border-border/50 pb-2">{category.category}</h3>
+              <div className="flex flex-wrap gap-2">
+                {category.items.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center rounded-md bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground ring-1 ring-inset ring-white/10 transition-colors hover:bg-secondary/80 hover:text-primary"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </Card>
+          </motion.div>
         ))}
-      </motion.ul>
-    </SectionWrapper>
+      </div>
+    </Section>
   );
 }

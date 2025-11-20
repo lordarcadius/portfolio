@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import { projectsData } from "@/lib/data";
+import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
 
-type ProjectCardProps = (typeof projectsData)[number];
+type ProjectCardProps = (typeof projectsData)[number] & { index?: number };
 
 export function ProjectCard({
   title,
@@ -15,61 +16,56 @@ export function ProjectCard({
   tags,
   liveUrl,
   githubUrl,
+  index = 0,
 }: ProjectCardProps) {
   return (
     <motion.div
-      className="group relative flex w-full flex-col overflow-hidden rounded-xl border border-foreground/15 bg-foreground/5 shadow-sm transition-shadow duration-300 hover:shadow-lg"
-      whileHover={{ scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="h-full"
     >
-      <div className="relative h-52 w-full overflow-hidden">
-        <Image
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/20" />
-      </div>
-
-      <div className="flex flex-col grow p-5">
-        <h3 className="text-xl font-semibold">{title}</h3>
-        <p className="mt-2 grow text-base text-foreground/80">{description}</p>
-
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <li
-              key={tag}
-              className="rounded-full bg-foreground/10 px-3 py-1 text-xs font-medium text-foreground/90"
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-5 flex items-center gap-4">
-          <Link
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40"
-            aria-label={`View live demo of ${title}`}
-          >
-            <ExternalLink className="h-4 w-4" />
-            Live Demo
-          </Link>
-          <Link
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground/40"
-            aria-label={`View GitHub repository for ${title}`}
-          >
-            <Github className="h-4 w-4" />
-            GitHub
-          </Link>
+      <Card className="h-full flex flex-col overflow-hidden group p-0 border-border/50 bg-secondary/20">
+        <div className="relative h-52 w-full overflow-hidden">
+          <Image
+            src={imageUrl}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-      </div>
+
+        <div className="flex flex-col grow p-6">
+          <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{title}</h3>
+          <p className="text-muted-foreground mb-4 line-clamp-3 flex-grow text-sm">
+            {description}
+          </p>
+
+          <div className="flex flex-wrap gap-2 mb-6">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-2.5 py-0.5 text-xs rounded-full bg-primary/10 text-primary font-medium border border-primary/20"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3 mt-auto">
+            <Button asLink href={liveUrl} size="sm" variant="default" target="_blank" className="flex-1">
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Live Demo
+            </Button>
+            <Button asLink href={githubUrl} size="sm" variant="outline" target="_blank" className="flex-1">
+              <Github className="w-4 h-4 mr-2" />
+              Code
+            </Button>
+          </div>
+        </div>
+      </Card>
     </motion.div>
   );
 }
