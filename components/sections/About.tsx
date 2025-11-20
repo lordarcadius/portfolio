@@ -10,7 +10,7 @@ import { TextReveal } from "@/components/ui/TextReveal";
 export function About() {
   return (
     <Section id="about" className="bg-secondary/30 py-12 md:py-10 rounded-[0.8rem] ">
-      <div className="grid gap-12 md:grid-cols-2 items-center">
+      <div className="grid gap-12 md:grid-cols-[1.3fr_0.7fr] items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -37,6 +37,16 @@ export function About() {
               contributing to open source, or looking for the next challenging
               project.
             </p>
+             <p>
+              When I&apos;m not coding, you can find me exploring new tech,
+              contributing to open source, or looking for the next challenging
+              project.
+            </p>
+             <p>
+              When I&apos;m not coding, you can find me exploring new tech,
+              contributing to open source, or looking for the next challenging
+              project.
+            </p>
           </div>
           <div className="pt-8">
             <Button
@@ -55,7 +65,7 @@ export function About() {
         </motion.div>
 
         <motion.div
-          className="relative aspect-square md:aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-zinc-900/50 border border-white/10 shadow-[0_0_50px_-10px_var(--primary)]"
+          className="relative aspect-square md:aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-zinc-900/50 border border-white/10 shadow-[0_0_50px_-10px_var(--primary)]"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.02 }}
