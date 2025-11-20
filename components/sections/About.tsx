@@ -1,6 +1,7 @@
 "use client";
 
 import { Section } from "@/components/ui/Section";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Download } from "lucide-react";
 import { motion } from "framer-motion";
@@ -8,7 +9,7 @@ import { TextReveal } from "@/components/ui/TextReveal";
 
 export function About() {
   return (
-    <Section id="about" className="bg-secondary/30">
+    <Section id="about" className="bg-secondary/30 py-12 md:py-10 rounded-[0.8rem] ">
       <div className="grid gap-12 md:grid-cols-2 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -54,17 +55,19 @@ export function About() {
         </motion.div>
 
         <motion.div
-          className="relative aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden bg-muted shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500"
+          className="relative aspect-square md:aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-zinc-900/50 border border-white/10 shadow-[0_0_50px_-10px_var(--primary)]"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
+          whileHover={{ scale: 1.02 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
         >
-           {/* Placeholder for an abstract image or another profile shot */}
-           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary to-accent/20 animate-gradient" />
-           <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/20 font-bold text-9xl select-none">
-              VJ
-           </div>
+           <Image
+              src="/images/profile.webp"
+              alt="Vipul Jha"
+              fill
+              className="object-cover transition-transform duration-500"
+            />
         </motion.div>
       </div>
     </Section>
