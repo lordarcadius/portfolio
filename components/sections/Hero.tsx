@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { SocialLinks } from "@/components/common/SocialLinks";
@@ -28,7 +30,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center items-center pt-16 pb-32 overflow-hidden"
+      className="relative min-h-[90vh] flex flex-col justify-center items-center pt-0 pb-40 overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
@@ -45,21 +47,21 @@ export function Hero() {
             visible: { transition: { staggerChildren: 0.1 } },
           }}
         >
-          <div className="mb-4 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm text-primary">
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+          <div className="mb-6 inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-500">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
             Available for work
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
             <TextReveal delay={0.1}>Hi, I'm Vipul Jha</TextReveal>
             <br />
-            <span className="text-muted-foreground text-4xl sm:text-5xl lg:text-6xl">
+            <span className="text-muted-foreground text-4xl sm:text-5xl lg:text-6xl mt-2 block">
               <TextReveal delay={0.3}>Full-Stack Developer</TextReveal>
             </span>
           </h1>
 
           <motion.p
-            className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-lg"
+            className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl lg:max-w-lg mx-auto lg:mx-0"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
@@ -80,6 +82,7 @@ export function Hero() {
               href="#projects"
               size="lg"
               variant="glow"
+              className="min-w-[160px]"
               onClick={(e) => handleHeroScroll(e, "#projects")}
             >
               View Projects
@@ -89,6 +92,7 @@ export function Hero() {
               href="#contact"
               variant="outline"
               size="lg"
+              className="min-w-[160px] border-primary/40 text-foreground hover:bg-primary/10 hover:border-primary hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               onClick={(e) => handleHeroScroll(e, "#contact")}
             >
               Contact Me
@@ -96,7 +100,7 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            className="mt-12"
+            className="mt-16"
             variants={{
               hidden: { opacity: 0 },
               visible: { opacity: 1 },
@@ -113,34 +117,31 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-            {/* Animated Border */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-accent to-primary p-1 animate-spin-slow">
-              <div className="absolute inset-0 rounded-full bg-background blur-sm" />
-            </div>
-            
-            {/* Image Container */}
-            <div className="absolute inset-1 rounded-full overflow-hidden border-4 border-background bg-background relative">
-               <Image
-                  src="/profile.webp"
-                  alt="Vipul Jha"
-                  fill
-                  className="object-cover hover:scale-110 transition-transform duration-500"
-                  priority
-                />
+            {/* Image Container with Gradient Border & Glow */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/40 via-accent/40 to-primary/40 p-1 shadow-[0_0_50px_-12px_var(--primary)]">
+               <div className="relative w-full h-full rounded-full overflow-hidden bg-background shadow-2xl border-4 border-background">
+                 <Image
+                    src="/images/profile.webp"
+                    alt="Vipul Jha"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    priority
+                  />
+               </div>
             </div>
 
-            {/* Floating Elements */}
+            {/* Floating Elements - Subtle Animation */}
             <motion.div
               className="absolute -top-4 -right-4 bg-background/80 backdrop-blur-md p-4 rounded-2xl border border-border shadow-xl"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
               <span className="text-2xl">🚀</span>
             </motion.div>
             <motion.div
               className="absolute -bottom-4 -left-4 bg-background/80 backdrop-blur-md p-4 rounded-2xl border border-border shadow-xl"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >
               <span className="text-2xl">💻</span>
             </motion.div>
