@@ -53,7 +53,7 @@ export function HeroSection() {
               {portfolioData.role}
             </h2>
 
-            <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-justify lg:text-left">
               {portfolioData.about}
             </p>
 
@@ -81,15 +81,15 @@ export function HeroSection() {
               <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
                 <Link
                   href="#projects"
-                  className="w-50 px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary/10 transition-all flex items-center justify-center gap-2"
+                  className="w-42 px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary/10 transition-all flex items-center justify-center gap-2"
                 >
-                  View Projects <ArrowRight size={20} />
+                  Projects <ArrowRight size={20} />
                 </Link>
 
                 <Link
                   href="/files/resume.pdf"
                   target="_blank"
-                  className="w-50 px-8 py-3 border-2 border-slate-700 text-slate-300 font-bold rounded-full hover:bg-slate-800 transition-all flex items-center justify-center gap-2"
+                  className="w-42 px-8 py-3 border-2 border-slate-700 text-slate-300 font-bold rounded-full hover:bg-slate-800 transition-all flex items-center justify-center gap-2"
                 >
                   Resume <Download size={20} />
                 </Link>
