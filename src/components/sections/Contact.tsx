@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { portfolioData } from "@/data/portfolio";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ import {
   TbAlertCircle,
 } from "react-icons/tb";
 
-export function ContactSection() {
+export const ContactSection = React.memo(function ContactSection() {
   const [formState, setFormState] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -22,41 +22,44 @@ export function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormState("loading");
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      setFormState("loading");
 
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          access_key:
-            process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "ACCESS_KEY_HERE",
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          subject: `New Contact Form Submission from ${formData.name}`,
-        }),
-      });
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            access_key:
+              process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "ACCESS_KEY_HERE",
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            subject: `New Contact Form Submission from ${formData.name}`,
+          }),
+        });
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (data.success) {
-        setFormState("success");
-        setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setFormState("idle"), 5000);
-      } else {
+        if (data.success) {
+          setFormState("success");
+          setFormData({ name: "", email: "", message: "" });
+          setTimeout(() => setFormState("idle"), 5000);
+        } else {
+          setFormState("error");
+          setTimeout(() => setFormState("idle"), 5000);
+        }
+      } catch (error) {
         setFormState("error");
         setTimeout(() => setFormState("idle"), 5000);
       }
-    } catch (error) {
-      setFormState("error");
-      setTimeout(() => setFormState("idle"), 5000);
-    }
-  };
+    },
+    [formData]
+  );
 
   return (
     <section id="contact" className="pt-10 pb-20 bg-slate-950/50">
@@ -226,4 +229,4 @@ export function ContactSection() {
       </div>
     </section>
   );
-}
+});

@@ -1,11 +1,13 @@
 "use client";
 
+import React from "react";
+
 import { portfolioData } from "@/data/portfolio";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { motion } from "framer-motion";
 import { TbBriefcase } from "react-icons/tb";
 
-export function ExperienceSection() {
+export const ExperienceSection = React.memo(function ExperienceSection() {
   return (
     <div className="h-full">
       <SectionHeading
@@ -49,4 +51,4 @@ export function ExperienceSection() {
       </div>
     </div>
   );
-}
+});

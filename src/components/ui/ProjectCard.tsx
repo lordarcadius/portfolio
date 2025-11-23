@@ -1,12 +1,14 @@
 "use client";
 
+import React from "react";
+
 import { Project } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
 import Link from "next/link";
 import Image from "next/image";
 
-export function ProjectCard({
+export const ProjectCard = React.memo(function ProjectCard({
   project,
   index,
 }: {
@@ -29,6 +31,7 @@ export function ProjectCard({
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -73,4 +76,4 @@ export function ProjectCard({
       </div>
     </motion.div>
   );
-}
+});

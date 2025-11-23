@@ -22,31 +22,43 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Active section logic
-      const sections = navLinks.map((link) => link.href.substring(1));
-
-      // Find the section that is currently most visible
-      let current = "";
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // Check if section is in the viewport (accounting for navbar)
-          // Section is active if its top is above middle of screen and bottom is below navbar
-          if (rect.top <= 200 && rect.bottom >= 100) {
-            current = section;
-          }
-        }
-      }
-      setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Trigger once on mount
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    navLinks.forEach((link) => {
+      const sectionId = link.href.substring(1);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const handleNavClick = (

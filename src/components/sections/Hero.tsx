@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
-export function HeroSection() {
+export const HeroSection = React.memo(function HeroSection() {
   return (
     <section
       id="about"
@@ -105,4 +105,4 @@ export function HeroSection() {
       </div>
     </section>
   );
-}
+});
