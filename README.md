@@ -1,57 +1,36 @@
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/lordarcadius/portfolio/blob/master/LICENSE)
+## Getting Started
 
-  
-# Personal Portfolio
-
-A portfolio built in React and NextJS. Simple, clean and fast.
-
-**Note: The logo and banner used in the project are my intellectual property. Please refrain from using it anywhere.**
-
-
-
-![App Screenshot](https://i.ibb.co/jRRNMkH/Screenshot-from-2021-10-27-18-45-14.png)
-
-  
-## Demo
-
-[Live Preview](https://www.vipuljha.com)
-
-## Run Project 
-
-Run this project with Yarn
-
-```bash 
-  yarn && yarn run dev
-```
-    
-## Deployment
-
-To deploy this project run
+First, run the development server:
 
 ```bash
-  yarn build
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-  
-## Contributing
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Contributions are always welcome!
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Fork repo, make changes, test, create a pull request.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Please make sure to maintain `authorship`.
+## Learn More
 
-  
-## Credits
+To learn more about Next.js, take a look at the following resources:
 
-- [@adrianhajdin](https://github.com/adrianhajdin) (The original author)
-- [@lordarcadius](https://github.com/lordarcadius) (I just fixed and modified few things)
-- [@dhruvsaxena1998](https://github.com/dhruvsaxena1998) (For help and PR)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-  
-## License
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-[MIT](https://github.com/lordarcadius/portfolio/blob/master/LICENSE)
+## Deploy on Vercel
 
-  
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
