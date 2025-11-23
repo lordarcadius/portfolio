@@ -8,8 +8,6 @@ import { portfolioData } from "@/data/portfolio";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 const geistSans = Geist({
@@ -33,7 +31,13 @@ export const metadata: Metadata = {
     "Kotlin",
     "Jetpack Compose",
     "Portfolio",
-    "Next.js",
+    "Next.js Portfolio",
+    "Vipul Jha",
+    "lordarcadius",
+    "Android Developer",
+    "vipul jha xda",
+    "Primebook",
+    "Primebook India",
   ],
   icons: {
     icon: [
@@ -43,7 +47,7 @@ export const metadata: Metadata = {
       },
     ],
     apple: "/icons/apple-touch-icon.png",
-    shortcut: "/icons/favicon.ico",
+    shortcut: "/favicon.ico",
   },
 };
 
@@ -55,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950 text-slate-50 selection:bg-primary/30 selection:text-primary`}
       >
         <Navbar />
