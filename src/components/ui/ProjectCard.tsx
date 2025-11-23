@@ -1,12 +1,18 @@
 "use client";
 
-import { Project } from '@/data/portfolio';
-import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { Project } from "@/data/portfolio";
+import { motion } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
-export function ProjectCard({ project, index }: { project: Project; index: number }) {
+export function ProjectCard({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -21,6 +27,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           src={project.thumbnail}
           alt={project.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
         />
       </div>
