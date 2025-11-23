@@ -98,7 +98,7 @@ export const HeroSection = React.memo(function HeroSection() {
                       src={portfolioData.profileImage}
                       alt={portfolioData.name}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
+                      sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       priority
                       onError={(e) => {
