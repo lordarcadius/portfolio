@@ -70,6 +70,8 @@ export function Navbar() {
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      // Prevent hash from appearing in URL
+      window.history.replaceState(null, "", window.location.pathname);
     }
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);

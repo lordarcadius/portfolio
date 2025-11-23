@@ -9,6 +9,15 @@ import Image from "next/image";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export const HeroSection = React.memo(function HeroSection() {
+  const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById("projects");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  };
+
   return (
     <section
       id="about"
@@ -49,6 +58,7 @@ export const HeroSection = React.memo(function HeroSection() {
               <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
                 <Link
                   href="#projects"
+                  onClick={handleScrollToProjects}
                   className="w-42 px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary/10 transition-all flex items-center justify-center gap-2"
                 >
                   Projects <TbArrowRight size={20} />
