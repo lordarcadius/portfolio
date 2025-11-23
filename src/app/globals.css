@@ -27,6 +27,10 @@
 }
 
 /* Enforce dark mode styles always */
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
