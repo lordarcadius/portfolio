@@ -61,8 +61,26 @@ export const portfolioData: PortfolioData = {
       url: "https://linkedin.com/in/lordarcadius",
       icon: "Linkedin",
     },
-    { platform: "Twitter", url: "https://x.com/lordarcadius", icon: "Twitter" },
-    { platform: "Email", url: "mailto:hey@vipuljha.com", icon: "Mail" },
+    {
+      platform: "X",
+      url: "https://x.com/lordarcadius",
+      icon: "Twitter", // Lucide might not have X yet, using Twitter as fallback or X if available in next step
+    },
+    {
+      platform: "Instagram",
+      url: "https://instagram.com/lordarcadius",
+      icon: "Instagram",
+    },
+    {
+      platform: "Medium",
+      url: "https://medium.com/@lordarcadius",
+      icon: "BookText", // Using BookText as a generic icon for Medium if branded one is missing
+    },
+    {
+      platform: "Email",
+      url: "mailto:hey@vipuljha.com",
+      icon: "Mail",
+    },
   ],
   skills: {
     mobile: [

@@ -3,26 +3,10 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolio";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Download,
-  Github,
-  Linkedin,
-  Mail,
-  Twitter,
-} from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
-const iconMap: Record<
-  string,
-  React.ComponentType<{ size?: number; className?: string }>
-> = {
-  Github: Github,
-  Linkedin: Linkedin,
-  Twitter: Twitter,
-  Mail: Mail,
-};
+import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export function HeroSection() {
   return (
@@ -59,23 +43,7 @@ export function HeroSection() {
 
             <div className="flex flex-col items-center lg:items-start gap-8">
               {/* Social Media Icons */}
-              <div className="flex items-center gap-4">
-                {portfolioData.social.map((link) => {
-                  const Icon = iconMap[link.icon] || Mail;
-                  return (
-                    <a
-                      key={link.platform}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full border-2 border-slate-700 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all"
-                      aria-label={link.platform}
-                    >
-                      <Icon size={20} />
-                    </a>
-                  );
-                })}
-              </div>
+              <SocialIcons variant="default" />
 
               {/* Buttons */}
               <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
