@@ -3,7 +3,7 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolio";
 import { motion } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { TbArrowRight, TbDownload } from "react-icons/tb";
 import Link from "next/link";
 import Image from "next/image";
 import { SocialIcons } from "@/components/ui/SocialIcons";
@@ -51,7 +51,7 @@ export function HeroSection() {
                   href="#projects"
                   className="w-42 px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary/10 transition-all flex items-center justify-center gap-2"
                 >
-                  Projects <ArrowRight size={20} />
+                  Projects <TbArrowRight size={20} />
                 </Link>
 
                 <Link
@@ -59,7 +59,7 @@ export function HeroSection() {
                   target="_blank"
                   className="w-42 px-8 py-3 border-2 border-slate-700 text-slate-300 font-bold rounded-full hover:bg-slate-800 transition-all flex items-center justify-center gap-2"
                 >
-                  Resume <Download size={20} />
+                  Resume <TbDownload size={20} />
                 </Link>
               </div>
             </div>
